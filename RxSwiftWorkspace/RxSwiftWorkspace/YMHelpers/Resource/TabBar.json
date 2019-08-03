@@ -1,0 +1,12 @@
+
+[
+    {"title" : "RxList",
+     "icon" : "iconHome",
+     "vc" : "RxListController"
+    },
+    {
+        "title" : "UIList",
+        "icon" : "iconFavorite",
+        "vc" : "UIListController"
+    },
+]
