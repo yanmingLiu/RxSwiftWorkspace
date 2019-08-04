@@ -9,4 +9,9 @@
         "icon" : "iconFavorite",
         "vc" : "UIListController"
     },
+    {
+        "title" : "SwiftList",
+        "icon" : "iconChat",
+        "vc" : "SwiftController"
+    },
 ]

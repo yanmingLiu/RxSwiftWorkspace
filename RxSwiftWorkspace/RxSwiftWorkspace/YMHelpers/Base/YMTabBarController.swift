@@ -50,8 +50,8 @@ extension UITabBarController {
         childVC.title = title
 
         if let image = icon {
-            childVC.tabBarItem.image = UIImage(named: image)
-            childVC.tabBarItem.selectedImage = UIImage(named: image + "Selected")
+            childVC.tabBarItem.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
+            childVC.tabBarItem.selectedImage = UIImage(named: image + "Selected")?.withRenderingMode(.alwaysOriginal)
         }
         let nav = YMNavigationController(rootViewController: childVC)
         self.addChild(nav)

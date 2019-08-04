@@ -1,0 +1,84 @@
+//
+//  NotiController.swift
+//  RxSwiftWorkspace
+//
+//  Created by lym on 2019/8/4.
+//  Copyright © 2019 lym. All rights reserved.
+//
+
+import UIKit
+
+class NotiController: BaseViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let tf = UITextField(frame: CGRect(x: 20, y: 100, width: 120, height: 35));
+        tf.backgroundColor = UIColor.white
+        tf.placeholder = "输入框"
+        view.addSubview(tf)
+
+        text.frame.origin.y = 145
+
+        /*
+          Optional(
+         [AnyHashable("UIKeyboardFrameBeginUserInfoKey"): NSRect: {{0, 812}, {375, 335}}, AnyHashable("UIKeyboardAnimationCurveUserInfoKey"): 7, AnyHashable("UIKeyboardIsLocalUserInfoKey"): 1, AnyHashable("UIKeyboardBoundsUserInfoKey"): NSRect: {{0, 0}, {375, 335}}, AnyHashable("UIKeyboardCenterBeginUserInfoKey"): NSPoint: {187.5, 979.5},
+         AnyHashable("UIKeyboardFrameEndUserInfoKey"): NSRect: {{0, 477}, {375, 335}}, AnyHashable("UIKeyboardCenterEndUserInfoKey"): NSPoint: {187.5, 644.5}, AnyHashable("UIKeyboardAnimationDurationUserInfoKey"): 0.25]
+         )
+         */
+
+        NotificationCenter.default.rx
+            .notification(UIWindow.keyboardWillShowNotification)
+            .subscribe(onNext: { (notification) in
+
+                let info = notification.userInfo as! [String : Any]
+
+                let rect = info[UIWindow.keyboardFrameEndUserInfoKey] as! CGRect
+                let height = rect.size.height;
+
+                let beginRect = info[UIWindow.keyboardFrameBeginUserInfoKey] as! CGRect
+                let endRect = rect
+
+                DLog("keyBordInfo.height = \(height)")
+                // 第三方键盘回调三次问题，监听仅执行最后一次
+                if(beginRect.size.height > 0 && (beginRect.origin.y - endRect.origin.y > 0)){
+
+                    //do someing
+                    DLog("------1-------\(beginRect)");
+                    DLog("------2-------\(endRect)")
+                }
+            })
+            .disposed(by: disposeBag)
+
+
+        text.text = """
+        NotificationCenter.default.rx
+        .notification(UIWindow.keyboardWillShowNotification)
+        .subscribe(onNext: { (notification) in
+
+        let info = notification.userInfo as! [String : Any]
+
+        let rect = info[UIWindow.keyboardFrameEndUserInfoKey] as! CGRect
+        let height = rect.size.height;
+
+        let beginRect = info[UIWindow.keyboardFrameBeginUserInfoKey] as! CGRect
+        let endRect = rect
+
+        // 第三方键盘回调三次问题，监听仅执行最后一次
+        if(beginRect.size.height > 0 && (beginRect.origin.y - endRect.origin.y > 0)){
+
+        
+        }
+        })
+        .disposed(by: disposeBag)
+        """
+
+
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+
+
+}

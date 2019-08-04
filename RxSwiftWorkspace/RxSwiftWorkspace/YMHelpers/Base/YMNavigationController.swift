@@ -63,13 +63,14 @@ class YMNavigationController: UINavigationController {
 
         if viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
-
+        
             let leftBarBtn = UIBarButtonItem(title: "", style: .plain, target: self, action: #selector(back))
-            leftBarBtn.image = UIImage(named: "nav_black")?.withRenderingMode(.alwaysOriginal)
+            leftBarBtn.image = UIImage(named: "return")?.withRenderingMode(.alwaysOriginal)
             leftBarBtn.setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -100, vertical: 0), for: .default)
             viewController.navigationItem.leftBarButtonItems = [leftBarBtn]
+            viewController.navigationController?.navigationBar.prefersLargeTitles = false;
           }
-        debugPrint(viewController)
+        DLog(viewController)
         super.pushViewController(viewController, animated: animated)
     }
 

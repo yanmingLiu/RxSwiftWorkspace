@@ -8,34 +8,27 @@
 
 import UIKit
 
-class RxListController: UITableViewController {
+class RxListController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell1")
+
+        keys = ["Rx点击事件",
+                "KVO监听",
+                "闭包回调",
+                "通知",
+
+
+        ]
+        vaules = ["TargetActionController",
+                  "KVOController",
+                  "BlockController",
+                  "NotiController"
+
+        ]
+
+
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
-
-
-        return cell
-    }
-
-
-
 
 }

@@ -23,6 +23,18 @@
 		C2EEC07722F5811A00422421 /* BaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC06F22F5811900422421 /* BaseData.swift */; };
 		C2EEC07E22F5A4B700422421 /* RxListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC07D22F5A4B700422421 /* RxListController.swift */; };
 		C2EEC08122F5A4ED00422421 /* UIListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC08022F5A4ED00422421 /* UIListController.swift */; };
+		C2EEC08422F5AB9000422421 /* SwiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC08322F5AB9000422421 /* SwiftController.swift */; };
+		C2EEC08722F6A31D00422421 /* SharedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC08622F6A31D00422421 /* SharedController.swift */; };
+		C2EEC08C22F6A9CE00422421 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC08B22F6A9CE00422421 /* Common.swift */; };
+		C2EEC08E22F6AD5C00422421 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC08D22F6AD5C00422421 /* BaseViewController.swift */; };
+		C2EEC09122F6B9B200422421 /* keywordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09022F6B9B200422421 /* keywordController.swift */; };
+		C2EEC09422F6BC3000422421 /* ClsStruController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09322F6BC3000422421 /* ClsStruController.swift */; };
+		C2EEC09622F6BDD500422421 /* clsStru.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EEC09522F6BDD500422421 /* clsStru.png */; };
+		C2EEC09922F6C1CD00422421 /* TargetActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09822F6C1CD00422421 /* TargetActionController.swift */; };
+		C2EEC09B22F6C3B400422421 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09A22F6C3B400422421 /* BaseTableViewController.swift */; };
+		C2EEC09E22F6C63200422421 /* KVOController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09D22F6C63200422421 /* KVOController.swift */; };
+		C2EEC0A122F6C7DF00422421 /* BlockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC0A022F6C7DF00422421 /* BlockController.swift */; };
+		C2EEC0A422F6CCD700422421 /* NotiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC0A322F6CCD700422421 /* NotiController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +58,18 @@
 		C2EEC06F22F5811900422421 /* BaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseData.swift; sourceTree = "<group>"; };
 		C2EEC07D22F5A4B700422421 /* RxListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxListController.swift; sourceTree = "<group>"; };
 		C2EEC08022F5A4ED00422421 /* UIListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIListController.swift; sourceTree = "<group>"; };
+		C2EEC08322F5AB9000422421 /* SwiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftController.swift; sourceTree = "<group>"; };
+		C2EEC08622F6A31D00422421 /* SharedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedController.swift; sourceTree = "<group>"; };
+		C2EEC08B22F6A9CE00422421 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		C2EEC08D22F6AD5C00422421 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C2EEC09022F6B9B200422421 /* keywordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keywordController.swift; sourceTree = "<group>"; };
+		C2EEC09322F6BC3000422421 /* ClsStruController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClsStruController.swift; sourceTree = "<group>"; };
+		C2EEC09522F6BDD500422421 /* clsStru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clsStru.png; sourceTree = "<group>"; };
+		C2EEC09822F6C1CD00422421 /* TargetActionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetActionController.swift; sourceTree = "<group>"; };
+		C2EEC09A22F6C3B400422421 /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		C2EEC09D22F6C63200422421 /* KVOController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KVOController.swift; sourceTree = "<group>"; };
+		C2EEC0A022F6C7DF00422421 /* BlockController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockController.swift; sourceTree = "<group>"; };
+		C2EEC0A322F6CCD700422421 /* NotiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +129,7 @@
 		C2EEC05E22F580A800422421 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				C2EEC08822F6A64800422421 /* Model */,
 				C2EEC06122F580E700422421 /* Controller */,
 			);
 			path = Main;
@@ -113,6 +138,7 @@
 		C2EEC05F22F580B700422421 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C2EEC08222F5AB8200422421 /* SwiftList */,
 				C2EEC07F22F5A4DA00422421 /* UIList */,
 				C2EEC07C22F5A42F00422421 /* RxList */,
 			);
@@ -122,6 +148,9 @@
 		C2EEC06122F580E700422421 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2EEC08B22F6A9CE00422421 /* Common.swift */,
+				C2EEC08D22F6AD5C00422421 /* BaseViewController.swift */,
+				C2EEC09A22F6C3B400422421 /* BaseTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -168,6 +197,10 @@
 		C2EEC07C22F5A42F00422421 /* RxList */ = {
 			isa = PBXGroup;
 			children = (
+				C2EEC0A222F6CC5A00422421 /* 通知 */,
+				C2EEC09F22F6C7CA00422421 /* Block */,
+				C2EEC09C22F6C61900422421 /* RxKVO */,
+				C2EEC09722F6C19B00422421 /* Rx点击事件 */,
 				C2EEC07D22F5A4B700422421 /* RxListController.swift */,
 			);
 			path = RxList;
@@ -179,6 +212,81 @@
 				C2EEC08022F5A4ED00422421 /* UIListController.swift */,
 			);
 			path = UIList;
+			sourceTree = "<group>";
+		};
+		C2EEC08222F5AB8200422421 /* SwiftList */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEC09222F6BC1B00422421 /* 类和结构体 */,
+				C2EEC08F22F6B99600422421 /* 关键词 */,
+				C2EEC08522F6A2BD00422421 /* 单利 */,
+				C2EEC08322F5AB9000422421 /* SwiftController.swift */,
+			);
+			path = SwiftList;
+			sourceTree = "<group>";
+		};
+		C2EEC08522F6A2BD00422421 /* 单利 */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEC08622F6A31D00422421 /* SharedController.swift */,
+			);
+			path = "单利";
+			sourceTree = "<group>";
+		};
+		C2EEC08822F6A64800422421 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2EEC08F22F6B99600422421 /* 关键词 */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEC09022F6B9B200422421 /* keywordController.swift */,
+			);
+			path = "关键词";
+			sourceTree = "<group>";
+		};
+		C2EEC09222F6BC1B00422421 /* 类和结构体 */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEC09522F6BDD500422421 /* clsStru.png */,
+				C2EEC09322F6BC3000422421 /* ClsStruController.swift */,
+			);
+			path = "类和结构体";
+			sourceTree = "<group>";
+		};
+		C2EEC09722F6C19B00422421 /* Rx点击事件 */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEC09822F6C1CD00422421 /* TargetActionController.swift */,
+			);
+			path = "Rx点击事件";
+			sourceTree = "<group>";
+		};
+		C2EEC09C22F6C61900422421 /* RxKVO */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEC09D22F6C63200422421 /* KVOController.swift */,
+			);
+			path = RxKVO;
+			sourceTree = "<group>";
+		};
+		C2EEC09F22F6C7CA00422421 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEC0A022F6C7DF00422421 /* BlockController.swift */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		C2EEC0A222F6CC5A00422421 /* 通知 */ = {
+			isa = PBXGroup;
+			children = (
+				C2EEC0A322F6CCD700422421 /* NotiController.swift */,
+			);
+			path = "通知";
 			sourceTree = "<group>";
 		};
 		F82B04C5C86D518C9F10CB97 /* Pods */ = {
@@ -253,6 +361,7 @@
 				C2EEC05722F5808B00422421 /* LaunchScreen.storyboard in Resources */,
 				C2EEC05422F5808B00422421 /* Assets.xcassets in Resources */,
 				C2EEC05222F5808900422421 /* Main.storyboard in Resources */,
+				C2EEC09622F6BDD500422421 /* clsStru.png in Resources */,
 				C2EEC07422F5811A00422421 /* TabBar.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,16 +416,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2EEC07522F5811A00422421 /* YMTabBarController.swift in Sources */,
+				C2EEC08422F5AB9000422421 /* SwiftController.swift in Sources */,
 				C2EEC07622F5811A00422421 /* YMNavigationController.swift in Sources */,
 				C2EEC07722F5811A00422421 /* BaseData.swift in Sources */,
+				C2EEC09922F6C1CD00422421 /* TargetActionController.swift in Sources */,
 				C2EEC07022F5811A00422421 /* UIView+lym.swift in Sources */,
+				C2EEC08E22F6AD5C00422421 /* BaseViewController.swift in Sources */,
 				C2EEC04F22F5808900422421 /* ViewController.swift in Sources */,
+				C2EEC09B22F6C3B400422421 /* BaseTableViewController.swift in Sources */,
+				C2EEC08C22F6A9CE00422421 /* Common.swift in Sources */,
+				C2EEC09E22F6C63200422421 /* KVOController.swift in Sources */,
 				C2EEC07222F5811A00422421 /* UIImage+lym.swift in Sources */,
 				C2EEC04D22F5808900422421 /* AppDelegate.swift in Sources */,
 				C2EEC08122F5A4ED00422421 /* UIListController.swift in Sources */,
+				C2EEC09122F6B9B200422421 /* keywordController.swift in Sources */,
+				C2EEC08722F6A31D00422421 /* SharedController.swift in Sources */,
+				C2EEC09422F6BC3000422421 /* ClsStruController.swift in Sources */,
 				C2EEC07122F5811A00422421 /* Util+lym.swift in Sources */,
 				C2EEC07322F5811A00422421 /* UIColor+lym.swift in Sources */,
 				C2EEC07E22F5A4B700422421 /* RxListController.swift in Sources */,
+				C2EEC0A122F6C7DF00422421 /* BlockController.swift in Sources */,
+				C2EEC0A422F6CCD700422421 /* NotiController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

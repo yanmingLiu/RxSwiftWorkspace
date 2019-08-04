@@ -10,6 +10,27 @@ import Foundation
 import UIKit
 
 
+func safeAreaBottom() -> CGFloat {
+    if #available(iOS 11.0, *) {
+        return (UIApplication.shared.delegate as? AppDelegate)?.window?.safeAreaInsets.bottom ?? 0.0
+    }
+    return CGFloat(0.0)
+}
+
+func isIphoneX() -> Bool {
+    if UIDevice.current.userInterfaceIdiom != .phone {
+        return true
+    }
+    if #available(iOS 11.0, *) {
+        let bootom = safeAreaBottom()
+        if bootom > 0.0 {
+            return true
+        }
+    }
+    return false
+}
+
+
 public func adaptWidth(designWidth: CGFloat = 375.0 , _ vaule: CGFloat) -> CGFloat {
     return UIScreen.main.bounds.size.width / designWidth * vaule
 }
