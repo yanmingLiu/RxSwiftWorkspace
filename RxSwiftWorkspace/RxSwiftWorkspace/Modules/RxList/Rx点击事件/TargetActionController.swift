@@ -21,7 +21,7 @@ class TargetActionController: BaseViewController {
         btn.snp.makeConstraints { (make) in
             make.width.equalTo(100)
             make.height.equalTo(50)
-            make.left.equalTo(50)
+            make.right.equalTo(-50)
             make.top.equalTo(100)
         }
 
@@ -32,17 +32,31 @@ class TargetActionController: BaseViewController {
             .disposed(by: rx.disposeBag)
 
 
+        text.text = """
+
+        // 按钮点击
+        btn.rx.tap
+            .subscribe({ (event) in
+                DLog(btn.currentTitle)
+            })
+            .disposed(by: rx.disposeBag)
+
+
+        // 手势点击
+        let tap = UITapGestureRecognizer()
+        view.addGestureRecognizer(tap)
+
+        tap.rx.event
+            .asObservable()
+            .subscribe(onNext: { (recognizer) in
+                DLog("tap 点击")
+            })
+            .disposed(by: rx.disposeBag)
+
+        """
+
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
