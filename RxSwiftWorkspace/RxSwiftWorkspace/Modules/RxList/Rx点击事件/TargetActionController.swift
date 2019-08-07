@@ -29,7 +29,7 @@ class TargetActionController: BaseViewController {
             .subscribe({ (event) in
                 DLog(btn.currentTitle)
             })
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
 
     }

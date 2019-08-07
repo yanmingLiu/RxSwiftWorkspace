@@ -48,7 +48,7 @@ class NotiController: BaseViewController {
                     DLog("------2-------\(endRect)")
                 }
             })
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
 
         text.text = """

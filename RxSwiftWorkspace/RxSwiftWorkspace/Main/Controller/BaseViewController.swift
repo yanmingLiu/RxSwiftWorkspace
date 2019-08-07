@@ -10,13 +10,12 @@ import UIKit
 
 import RxSwift
 import RxCocoa
+import NSObject_Rx
+import Then
 
 class BaseViewController: UIViewController {
 
     let text = UITextView()
-
-    let disposeBag = DisposeBag()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +31,10 @@ class BaseViewController: UIViewController {
 
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        view.endEditing(true)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -41,7 +44,6 @@ class BaseViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
 
         navigationController?.navigationBar.prefersLargeTitles = true
     }

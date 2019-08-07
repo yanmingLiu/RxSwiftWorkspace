@@ -9,12 +9,19 @@ target 'RxSwiftWorkspace' do
 
     pod 'RxSwift'
     pod 'RxCocoa'
-    pod 'Kingfisher'
-    pod 'SnapKit'
+    pod 'RxDataSources'
+    pod 'NSObject+Rx'
+
     pod 'Moya/RxSwift'
-    pod 'SwiftyAttributes'
     pod 'HandyJSON'
-    pod 'IQKeyboardManagerSwift'
+
+    #pod 'Hero'
+    pod 'Then'
+    pod 'SnapKit'
+    pod 'Kingfisher'
     pod 'Toast-Swift'
+    pod 'SwiftyAttributes'
+    pod 'TextFieldEffects'
+    pod 'IQKeyboardManagerSwift'
 
 end

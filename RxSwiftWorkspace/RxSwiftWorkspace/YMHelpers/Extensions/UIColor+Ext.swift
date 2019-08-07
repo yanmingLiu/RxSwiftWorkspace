@@ -24,7 +24,7 @@ extension UIColor {
      - parameter alpha      : 透明度，默认为1，不透明
      - returns: RGB
      */
-    static func withHex(hexString hex: String, alpha:CGFloat = 1) -> UIColor {
+    static func hexString(_ hex: String, alpha:CGFloat = 1) -> UIColor {
         // 去除空格等
         var cString: String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
         // 去除#
@@ -54,7 +54,7 @@ extension UIColor {
      - parameter alpha  : 透明度
      - returns : 颜色
      */
-    static func withHex(hexInt hex:Int32, alpha:CGFloat = 1) -> UIColor {
+    static func hexInt32(hex:Int32, alpha:CGFloat = 1) -> UIColor {
         let r = CGFloat((hex & 0xff0000) >> 16) / 255
         let g = CGFloat((hex & 0xff00) >> 8) / 255
         let b = CGFloat(hex & 0xff) / 255
@@ -68,8 +68,8 @@ extension UIColor {
      - parameter blue   : 蓝色
      - returns : 颜色
      */
-    static func withRGB(_ red:CGFloat, _ green:CGFloat, _ blue:CGFloat) -> UIColor {
-        return UIColor.withRGBA(red, green, blue, 1)
+    static func RGB(_ red:CGFloat, _ green:CGFloat, _ blue:CGFloat) -> UIColor {
+        return UIColor.RGBA(red, green, blue, 1)
     }
 
     /**
@@ -80,7 +80,7 @@ extension UIColor {
      - parameter alpha  : 透明度
      - returns : 颜色
      */
-    static func withRGBA(_ red:CGFloat, _ green:CGFloat, _ blue:CGFloat, _ alpha:CGFloat) -> UIColor {
+    static func RGBA(_ red:CGFloat, _ green:CGFloat, _ blue:CGFloat, _ alpha:CGFloat) -> UIColor {
         return UIColor(red: red / 255, green: green / 255, blue: blue / 255, alpha: alpha)
     }
 

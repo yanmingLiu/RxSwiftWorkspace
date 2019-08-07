@@ -23,9 +23,7 @@ class KVOController: BaseViewController {
             .subscribe({ (contentOffset) in
                 print("contentOffset: \(contentOffset)")
             })
-            .disposed(by: disposeBag)
-
-
+            .disposed(by: rx.disposeBag)
     }
 
     

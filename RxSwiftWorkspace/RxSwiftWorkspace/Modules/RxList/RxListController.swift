@@ -18,13 +18,14 @@ class RxListController: BaseTableViewController {
                 "KVO监听",
                 "闭包回调",
                 "通知",
-
+                "登录",
 
         ]
         vaules = ["TargetActionController",
                   "KVOController",
                   "BlockController",
-                  "NotiController"
+                  "NotiController",
+                  "LoginController"
 
         ]
 

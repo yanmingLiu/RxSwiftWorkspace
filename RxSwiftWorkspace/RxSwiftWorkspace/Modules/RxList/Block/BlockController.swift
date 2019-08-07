@@ -41,7 +41,7 @@ class BlockController: BaseViewController {
             }, onDisposed: {
 
             })
-            .disposed(by: disposeBag)
+            .disposed(by: rx.disposeBag)
 
 
         text.text = """
