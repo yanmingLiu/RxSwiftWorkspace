@@ -36,7 +36,6 @@ public func adaptWidth(designWidth: CGFloat = 375.0 , _ vaule: CGFloat) -> CGFlo
 }
 
 extension UIView {
-
     /// 屏幕适配
     func adaptSubViews() {
         // 约束

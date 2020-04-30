@@ -26,7 +26,10 @@ class LoginController: BaseViewController {
 
     private func bindUI() {
 
-        inputTF.rx.text.orEmpty.map({$0[0..<11]}).bind(to: inputTF.rx.text).disposed(by: rx.disposeBag)
+        inputTF.rx.text.orEmpty
+            .map({$0[0..<11]})
+            .bind(to: inputTF.rx.text)
+            .disposed(by: rx.disposeBag)
 
     }
 
@@ -58,14 +61,14 @@ class LoginController: BaseViewController {
 
         subTitleLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(25)
-            make.top.equalTo(titleLable.snp_bottomMargin).offset(10)
+            make.top.equalTo(titleLable.snp_bottomMargin).offset(15)
             make.height.equalTo(22)
         }
 
         let textField = HoshiTextField().then {
             $0.textAlignment = .left
             $0.placeholderColor = .hexString("#A9A9A9")
-            $0.font = .systemFont(ofSize: 17)
+            $0.font = .systemFont(ofSize: 18, weight: .bold)
             $0.textColor = .hexString("#484848")
             $0.borderInactiveColor = .hexString("#A9A9A9")
             $0.borderActiveColor = .hexString("#22BB62")
@@ -102,8 +105,12 @@ class LoginController: BaseViewController {
             make.height.equalTo(54)
         }
 
-        btn.rx.tap.subscribe(onNext: {
-            DLog("btn 点击")
+        btn.rx.tap.subscribe(onNext: { [weak self]  in
+            dlog("btn 点击")
+
+            let vc = CodeController()
+            vc.phone = textField.text ?? ""
+            self?.navigationController?.pushViewController(vc, animated: true)
 
         }).disposed(by: rx.disposeBag)
 
@@ -113,12 +120,12 @@ class LoginController: BaseViewController {
             $0.isUserInteractionEnabled = true
 
             let attStr1 = "点击按钮即为同意".withAttributes([
-                .font(.systemFont(ofSize: 13)),
+                .font(.systemFont(ofSize: 14)),
                 .textColor(.hexString("#A9A9A9")),
                 ])
 
             let attStr2 = "《产业工人用户使用协议》".withAttributes([
-                .font(.systemFont(ofSize: 13)),
+                .font(.systemFont(ofSize: 14)),
                 .textColor(.hexString("#22BB62"))
                 ])
 
@@ -127,7 +134,7 @@ class LoginController: BaseViewController {
             let tap = UITapGestureRecognizer()
             $0.addGestureRecognizer(tap)
             tap.rx.event.asObservable().subscribe(onNext: { (recognizer) in
-                DLog("tap 点击")
+                dlog("tap 点击")
 
             }).disposed(by: rx.disposeBag)
         }

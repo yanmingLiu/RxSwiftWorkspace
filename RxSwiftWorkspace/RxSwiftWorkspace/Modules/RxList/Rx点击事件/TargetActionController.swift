@@ -27,7 +27,7 @@ class TargetActionController: BaseViewController {
 
         btn.rx.tap
             .subscribe({ (event) in
-                DLog(btn.currentTitle)
+                dlog(btn.currentTitle)
             })
             .disposed(by: rx.disposeBag)
 

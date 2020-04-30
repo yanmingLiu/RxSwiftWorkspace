@@ -70,7 +70,7 @@ class YMNavigationController: UINavigationController {
             viewController.navigationItem.leftBarButtonItems = [leftBarBtn]
             viewController.navigationController?.navigationBar.prefersLargeTitles = false;
           }
-        DLog(viewController)
+        dlog(viewController)
         super.pushViewController(viewController, animated: animated)
     }
 

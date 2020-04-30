@@ -39,13 +39,13 @@ class NotiController: BaseViewController {
                 let beginRect = info[UIWindow.keyboardFrameBeginUserInfoKey] as! CGRect
                 let endRect = rect
 
-                DLog("keyBordInfo.height = \(height)")
+                dlog("keyBordInfo.height = \(height)")
                 // 第三方键盘回调三次问题，监听仅执行最后一次
                 if(beginRect.size.height > 0 && (beginRect.origin.y - endRect.origin.y > 0)){
 
                     //do someing
-                    DLog("------1-------\(beginRect)");
-                    DLog("------2-------\(endRect)")
+                    dlog("------1-------\(beginRect)");
+                    dlog("------2-------\(endRect)")
                 }
             })
             .disposed(by: rx.disposeBag)

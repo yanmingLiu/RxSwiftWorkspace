@@ -1,9 +1,11 @@
 PODS:
   - Alamofire (4.8.2)
   - Differentiator (3.1.0)
+  - ESTabBarController-swift (2.7)
   - HandyJSON (5.0.0)
   - IQKeyboardManagerSwift (6.4.0)
   - Kingfisher (5.7.0)
+  - LookinServer (1.0.0)
   - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
@@ -21,33 +23,39 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.5.0)
   - SnapKit (5.0.0)
+  - SSCustomTabbar (2.0.2)
   - SwiftyAttributes (5.1.1)
   - TextFieldEffects (1.6.0)
   - Then (2.5.0)
   - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
+  - ESTabBarController-swift
   - HandyJSON
   - IQKeyboardManagerSwift
   - Kingfisher
+  - LookinServer
   - Moya/RxSwift
   - "NSObject+Rx"
   - RxCocoa
   - RxDataSources
   - RxSwift
   - SnapKit
+  - SSCustomTabbar
   - SwiftyAttributes
   - TextFieldEffects
   - Then
   - Toast-Swift
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - Differentiator
+    - ESTabBarController-swift
     - HandyJSON
     - IQKeyboardManagerSwift
     - Kingfisher
+    - LookinServer
     - Moya
     - "NSObject+Rx"
     - Result
@@ -55,6 +63,7 @@ SPEC REPOS:
     - RxDataSources
     - RxSwift
     - SnapKit
+    - SSCustomTabbar
     - SwiftyAttributes
     - TextFieldEffects
     - Then
@@ -63,9 +72,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
+  ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
   HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
   IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
   Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
@@ -73,11 +84,12 @@ SPEC CHECKSUMS:
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SSCustomTabbar: e18f8aa256bce5c8a4742e53e638f64b33fb0e10
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: d2d01929fa987a7ec16ec00f5e3f9b5431b6eb56
+PODFILE CHECKSUM: ae2c952fee7ce63fc617b60afb965561be301042
 
-COCOAPODS: 1.7.2
+COCOAPODS: 1.8.4

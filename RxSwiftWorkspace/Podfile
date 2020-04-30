@@ -24,4 +24,10 @@ target 'RxSwiftWorkspace' do
     pod 'TextFieldEffects'
     pod 'IQKeyboardManagerSwift'
 
+    pod 'SSCustomTabbar'
+    pod "ESTabBarController-swift"
+    
+    
+    pod 'LookinServer', :configurations => ['Debug']
+
 end

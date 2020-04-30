@@ -40,7 +40,7 @@ class SharedController: BaseViewController {
 
         SharedDemo.shared.id = (arc4random() % 5).description
 
-        DLog(SharedDemo.shared.id)
+        dlog(SharedDemo.shared.id)
     }
 
 
