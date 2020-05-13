@@ -12,12 +12,7 @@ import Moya
 struct BaseAPI {
 
     static var baseURL: URL {
-
-        #if DEBUG
-        return try! "http://api.jinxiansen.com/".asURL()
-        #else
-        return try! "http://api.jinxiansen.com/".asURL() //
-        #endif
+        return try! "http://120.26.88.217:8100".asURL()
     }
 
     static var headers: [String : String] {

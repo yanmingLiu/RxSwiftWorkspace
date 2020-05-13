@@ -2,16 +2,19 @@
 [
     {"title" : "RxList",
      "icon" : "iconHome",
-     "vc" : "RxListController"
+     "vc" : "RxListController",
+     "tag" : 0
     },
     {
         "title" : "UIList",
         "icon" : "iconFavorite",
-        "vc" : "UIListController"
+        "vc" : "UIListController",
+        "tag" : 1
     },
     {
         "title" : "SwiftList",
         "icon" : "iconChat",
-        "vc" : "SwiftController"
+        "vc" : "SwiftController",
+        "tag" : 2
     },
 ]
