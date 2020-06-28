@@ -3,22 +3,19 @@
     {
         "title" : "RxList",
         "icon" : "iconHome",
-        "vc" : "RxListController"
-        {"title" : "RxList",
-            "icon" : "iconHome",
-            "vc" : "RxListController",
-            "tag" : 0
-        },
-        {
-            "title" : "UIList",
-            "icon" : "iconFavorite",
-            "vc" : "UIListController",
-            "tag" : 1
-        },
-        {
-            "title" : "SwiftList",
-            "icon" : "iconChat",
-            "vc" : "SwiftController",
-            "tag" : 2
-        },
-        ]
+        "vc" : "RxListController",
+        "tag" : 0
+    },
+    {
+        "title" : "UIList",
+        "icon" : "iconFavorite",
+        "vc" : "UIListController",
+        "tag" : 1
+    },
+    {
+        "title" : "SwiftList",
+        "icon" : "iconChat",
+        "vc" : "SwiftController",
+        "tag" : 2
+    },
+]
