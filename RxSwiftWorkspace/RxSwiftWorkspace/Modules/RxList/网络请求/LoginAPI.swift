@@ -12,7 +12,8 @@ import RxSwift
 
 
 let UserProvider = MoyaProvider<LoginAPI>(endpointClosure:MoyaProvider.defaultEndpointMapping,
-                                         plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: BaseAPI.jsonResponseDataFormatter),BaseAPI.networkActivityPlugin])
+                                         plugins: [BaseAPI.networkActivityPlugin])
+
 
 enum LoginAPI {
     case code(phone: String)

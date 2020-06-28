@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+
+platform :ios, '11.0'
 
 target 'RxSwiftWorkspace' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,14 +9,13 @@ target 'RxSwiftWorkspace' do
   # Pods for RxSwiftWorkspace
 
     pod 'RxSwift'
-    pod 'RxCocoa'
+    pod 'RxCocoa' 
     pod 'RxDataSources'
     pod 'NSObject+Rx'
 
     pod 'Moya/RxSwift'
     pod 'HandyJSON'
 
-    #pod 'Hero'
     pod 'Then'
     pod 'SnapKit'
     pod 'Kingfisher'
@@ -23,6 +23,7 @@ target 'RxSwiftWorkspace' do
     pod 'SwiftyAttributes'
     pod 'TextFieldEffects'
     pod 'IQKeyboardManagerSwift'
+    pod 'TangramKit'
 
     pod 'SSCustomTabbar'
     pod "ESTabBarController-swift"

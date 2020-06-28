@@ -20,24 +20,7 @@ class BaseTableViewController: UITableViewController {
         view.backgroundColor = UIColor.white
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
     }
-
-
-
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        navigationController?.navigationBar.prefersLargeTitles = false
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//
-//
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//    }
-
 
     // MARK: - Table view data source
 

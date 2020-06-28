@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
  
 extension String {
  
@@ -17,9 +18,6 @@ extension String {
         return self.contains(regular: regular)
     }
     
-    var length: Int {
-        return self.count //.characters.count
-    }
     
     subscript (r: Range<Int>) -> String {
         let start = self.index(self.startIndex, offsetBy: r.lowerBound, limitedBy: self.endIndex) ?? self.endIndex
@@ -31,5 +29,26 @@ extension String {
     }
     subscript (str:String) -> Range<Index>? {
         return self.range(of: str)
+    }
+    
+    
+    /// 字符串转换成UIViewController?
+    /// - Returns: UIViewController?
+    public func toViewController() -> UIViewController? {
+        if self.isEmpty {
+            return nil
+        }
+        // 1.获取命名空间
+        guard let name = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+            return nil
+        }
+        // 2.获取Class
+        let vcCls: AnyClass? = NSClassFromString(name + "." + self)
+        guard let tyleCls = vcCls as? UIViewController.Type else {
+            return nil
+        }
+        // 3.创建vc
+        let vc = tyleCls.init()
+        return vc
     }
 }

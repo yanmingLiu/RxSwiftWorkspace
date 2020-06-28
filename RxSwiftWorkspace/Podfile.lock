@@ -1,33 +1,37 @@
 PODS:
-  - Alamofire (4.8.2)
-  - Differentiator (3.1.0)
-  - ESTabBarController-swift (2.7)
-  - HandyJSON (5.0.0)
-  - IQKeyboardManagerSwift (6.4.0)
-  - Kingfisher (5.7.0)
+  - Alamofire (5.2.1)
+  - Differentiator (4.0.1)
+  - ESTabBarController-swift (2.8.0)
+  - HandyJSON (5.0.2)
+  - IQKeyboardManagerSwift (6.5.5)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
   - LookinServer (1.0.0)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
-  - Moya/RxSwift (13.0.1):
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
     - Moya/Core
-    - RxSwift (~> 4.0)
-  - "NSObject+Rx (4.4.1)":
-    - RxSwift (~> 4.3)
-  - Result (4.1.0)
-  - RxCocoa (4.5.0):
-    - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxDataSources (3.1.0):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.5.0)
-  - SnapKit (5.0.0)
-  - SSCustomTabbar (2.0.2)
+    - RxSwift (~> 5.0)
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SnapKit (5.0.1)
+  - SSCustomTabbar (2.0.6)
   - SwiftyAttributes (5.1.1)
+  - TangramKit (1.4.2)
   - TextFieldEffects (1.6.0)
-  - Then (2.5.0)
-  - Toast-Swift (5.0.0)
+  - Then (2.7.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - ESTabBarController-swift
@@ -43,6 +47,7 @@ DEPENDENCIES:
   - SnapKit
   - SSCustomTabbar
   - SwiftyAttributes
+  - TangramKit
   - TextFieldEffects
   - Then
   - Toast-Swift
@@ -58,38 +63,40 @@ SPEC REPOS:
     - LookinServer
     - Moya
     - "NSObject+Rx"
-    - Result
     - RxCocoa
     - RxDataSources
+    - RxRelay
     - RxSwift
     - SnapKit
     - SSCustomTabbar
     - SwiftyAttributes
+    - TangramKit
     - TextFieldEffects
     - Then
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  ESTabBarController-swift: 4fb52ad03d94d0717ef97bc9eb09a5abfdded0a2
-  HandyJSON: 992f2d661716d6a91de82d0056927bc7813b5770
-  IQKeyboardManagerSwift: ed9b04ee0e3067ffba543283462d619f944b05e5
-  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
-  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
-  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
-  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
-  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
-  SSCustomTabbar: e18f8aa256bce5c8a4742e53e638f64b33fb0e10
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SSCustomTabbar: a52533e429bd40f52ce8d7ecb801f3521fbd56a0
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
+  TangramKit: aad3ab8f9617418c9da96d59cddd71134ae8af83
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
-  Then: 0157115e883545c77967b452fe74a1d25fb796e1
-  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: ae2c952fee7ce63fc617b60afb965561be301042
+PODFILE CHECKSUM: 12ca4c1f2e89e24aa02c5438b1c1b379d2f817df
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

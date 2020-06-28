@@ -15,7 +15,7 @@ class LoginViewModel {
 
 
     func isPhone(_ phone : String) -> Observable<Bool> {
-        if phone.length != 11 {
+        if phone.count != 11 {
             return Observable.just(false)
         }
         let predicateStr = "^1(3|4|5|6|7|8|9)[0-9]\\d{8}$"

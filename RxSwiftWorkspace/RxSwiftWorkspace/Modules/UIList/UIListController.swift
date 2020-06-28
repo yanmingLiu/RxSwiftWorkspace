@@ -10,12 +10,13 @@ import UIKit
 
 class UIListController: UITableViewController {
 
+    let list = ["MineViewController"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell2")
-
 
     }
 
@@ -27,15 +28,23 @@ class UIListController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return list.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
-
-
+        cell.accessoryType = .disclosureIndicator
+        cell.textLabel?.text = list[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vcStr = list[indexPath.row]
+        guard let vc = vcStr.toViewController() else {
+            return
+        }
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
