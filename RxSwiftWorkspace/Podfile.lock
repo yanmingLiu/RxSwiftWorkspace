@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - AttributedString (1.6.8)
   - Differentiator (4.0.1)
   - ESTabBarController-swift (2.8.0)
   - HandyJSON (5.0.2)
@@ -34,6 +35,7 @@ PODS:
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
+  - AttributedString
   - ESTabBarController-swift
   - HandyJSON
   - IQKeyboardManagerSwift
@@ -55,6 +57,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AttributedString
     - Differentiator
     - ESTabBarController-swift
     - HandyJSON
@@ -77,6 +80,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  AttributedString: 20191014381c897ea03bd6733a21b8f6e98145d1
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
@@ -97,6 +101,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: f1676c806b985819e5911859d3c4465b46c8c1ba
+PODFILE CHECKSUM: ea9fff5964acba08de3e753597f7efce4bccdf7e
 
 COCOAPODS: 1.9.3

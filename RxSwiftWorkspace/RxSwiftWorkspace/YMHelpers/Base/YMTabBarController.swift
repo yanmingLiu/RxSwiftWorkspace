@@ -43,18 +43,24 @@ extension YMTabBarController {
         
         guard let vcName = vc else { return }
         
-        // 1.获取命名空间
-        guard let name = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
-            return
-        }
-        // 2.获取Class
-        let vcCls: AnyClass? = NSClassFromString(name + "." + vcName)
-        guard let tyleCls = vcCls as? UIViewController.Type else {
-            return
-        }
-        // 3.创建vc
-        let childVC = tyleCls.init()
+        let viewController = vcName.toViewController()
+        
+        guard let childVC = viewController else { return }
+        
         childVC.navigationItem.title = title
+
+//        // 1.获取命名空间
+//        guard let name = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
+//            return
+//        }
+//        // 2.获取Class
+//        let vcCls: AnyClass? = NSClassFromString(name + "." + vcName)
+//        guard let tyleCls = vcCls as? UIViewController.Type else {
+//            return
+//        }
+//        // 3.创建vc
+//        let childVC = tyleCls.init()
+//        childVC.navigationItem.title = title
         
         if let image = icon {
             let nomalImage = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)

@@ -9,81 +9,72 @@
 import Foundation
 import UIKit
 
-extension UIColor {
 
+extension UIColor {
     /// 随机颜色
     class var random: UIColor {
         get {
-            return UIColor(red: CGFloat(arc4random()%256) / 255.0, green: CGFloat(arc4random()%256) / 255.0, blue: CGFloat(arc4random()%256) / 255.0, alpha: 1.0)
+            return UIColor(red: CGFloat(arc4random()%256) / 255.0, green: CGFloat(arc4random()%256) / 255.0, blue: CGFloat(arc4random()%256) / 255.0, alpha: 0.5)
         }
     }
 
-    /**
-     获取颜色，通过16进制色值字符串，e.g. #ff0000， ff0000
-     - parameter hexString  : 16进制字符串
-     - parameter alpha      : 透明度，默认为1，不透明
-     - returns: RGB
-     */
-    static func hexString(_ hex: String, alpha:CGFloat = 1) -> UIColor {
-        // 去除空格等
-        var cString: String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
-        // 去除#
-        if (cString.hasPrefix("#")) {
-            cString = (cString as NSString).substring(from: 1)
+    /// 根据16进制颜色值返回颜色
+    /// - Parameters:
+    ///   - hexString: 颜色值字符串: 前缀 ‘#’ 和 ‘0x’ 不是必须的
+    ///   - alpha: 透明度，默认为1
+    /// - Returns: UIColor
+    static func hexString(_ hexString: String, alpha: CGFloat = 1) -> UIColor {
+        var str = ""
+        if hexString.lowercased().hasPrefix("0x") {
+            str = hexString.replacingOccurrences(of: "0x", with: "")
+        } else if hexString.lowercased().hasPrefix("#") {
+            str = hexString.replacingOccurrences(of: "#", with: "")
+        } else {
+            str = hexString
         }
-        // 必须为6位
-        if (cString.count != 6) {
-            return UIColor.gray
+        
+        let length = str.count
+        // 如果不是 RGB RGBA RRGGBB RRGGBBAA 结构
+        if length != 3 && length != 4 && length != 6 && length != 8 {
+            return .clear
         }
-        // 红色的色值
-        let rString = (cString as NSString).substring(to: 2)
-        let gString = ((cString as NSString).substring(from: 2) as NSString).substring(to: 2)
-        let bString = ((cString as NSString).substring(from: 4) as NSString).substring(to: 2)
-        // 字符串转换
-        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0
-        Scanner(string: rString).scanHexInt32(&r)
-        Scanner(string: gString).scanHexInt32(&g)
-        Scanner(string: bString).scanHexInt32(&b)
-
-        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: alpha)
+        
+        // 将 RGB RGBA 转换为 RRGGBB RRGGBBAA 结构
+        if length < 5 {
+            var tStr = ""
+            str.forEach { tStr.append(String(repeating: $0, count: 2)) }
+            str = tStr
+        }
+        
+        guard let hexValue = Int(str, radix: 16) else { return .clear }
+        
+        var red = 0
+        var green = 0
+        var blue = 0
+        
+        if length == 3 || length == 6 {
+            red = (hexValue >> 16) & 0xff
+            green = (hexValue >> 8) & 0xff
+            blue = hexValue & 0xff
+        } else {
+            red = (hexValue >> 20) & 0xff
+            green = (hexValue >> 16) & 0xff
+            blue = (hexValue >> 8) & 0xff
+        }
+        return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
     }
-
-    /**
-     获取颜色，通过16进制数值
-     - parameter hexInt : 16进制数值
-     - parameter alpha  : 透明度
-     - returns : 颜色
-     */
+    
+    /// 根据16进制颜色值返回颜色
+    /// - Parameters:
+    ///   - hex: 16进制数值
+    ///   - alpha: 透明度，默认为1
+    /// - Returns: UIColor
     static func hexInt32(hex:Int32, alpha:CGFloat = 1) -> UIColor {
         let r = CGFloat((hex & 0xff0000) >> 16) / 255
         let g = CGFloat((hex & 0xff00) >> 8) / 255
         let b = CGFloat(hex & 0xff) / 255
         return UIColor(red: r, green: g, blue: b, alpha: alpha)
     }
-
-    /**
-     获取颜色，通过rgb
-     - parameter red    : 红色
-     - parameter green  : 绿色
-     - parameter blue   : 蓝色
-     - returns : 颜色
-     */
-    static func RGB(_ red:CGFloat, _ green:CGFloat, _ blue:CGFloat) -> UIColor {
-        return UIColor.RGBA(red, green, blue, 1)
-    }
-
-    /**
-     获取颜色，通过rgb
-     - parameter red    : 红色
-     - parameter green  : 绿色
-     - parameter blue   : 蓝色
-     - parameter alpha  : 透明度
-     - returns : 颜色
-     */
-    static func RGBA(_ red:CGFloat, _ green:CGFloat, _ blue:CGFloat, _ alpha:CGFloat) -> UIColor {
-        return UIColor(red: red / 255, green: green / 255, blue: blue / 255, alpha: alpha)
-    }
-
-    
 }
+
 

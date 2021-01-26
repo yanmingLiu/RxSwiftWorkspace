@@ -29,7 +29,8 @@ target 'RxSwiftWorkspace' do
 
     pod 'SSCustomTabbar'
     pod "ESTabBarController-swift"
-    
+    pod 'AttributedString'
+
     
     pod 'LookinServer', :configurations => ['Debug']
 

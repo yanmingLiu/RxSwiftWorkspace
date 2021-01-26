@@ -49,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		042020900BECC8A0C92E4B72 /* Pods-RxSwiftWorkspace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftWorkspace.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftWorkspace/Pods-RxSwiftWorkspace.release.xcconfig"; sourceTree = "<group>"; };
+		38BC1B2F25C0323800D31E4C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		92E9E9FB450CD6B5DB49115B /* Pods_RxSwiftWorkspace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftWorkspace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A676FBFC02F753101685184E /* Pods-RxSwiftWorkspace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftWorkspace.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftWorkspace/Pods-RxSwiftWorkspace.debug.xcconfig"; sourceTree = "<group>"; };
 		C255A1ED24A5F0D400E3C0F1 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +142,7 @@
 		C2EEC04022F5808900422421 = {
 			isa = PBXGroup;
 			children = (
+				38BC1B2F25C0323800D31E4C /* MyPlayground.playground */,
 				C2EEC04B22F5808900422421 /* RxSwiftWorkspace */,
 				C2EEC04A22F5808900422421 /* Products */,
 				F82B04C5C86D518C9F10CB97 /* Pods */,
