@@ -9,15 +9,17 @@
 import UIKit
 
 class UIListController: UITableViewController {
-
-    let list = ["MineViewController"]
-    
+    let list = ["MineViewController",
+                "ImageViewController",
+                "UICollectionViewMove",
+                "MassiveViewController",
+                "MVCController"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell2")
 
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell2")
     }
 
     // MARK: - Table view data source
@@ -31,14 +33,13 @@ class UIListController: UITableViewController {
         return list.count
     }
 
-
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = list[indexPath.row]
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vcStr = list[indexPath.row]
         guard let vc = vcStr.toViewController() else {
@@ -46,5 +47,4 @@ class UIListController: UITableViewController {
         }
         navigationController?.pushViewController(vc, animated: true)
     }
-
 }

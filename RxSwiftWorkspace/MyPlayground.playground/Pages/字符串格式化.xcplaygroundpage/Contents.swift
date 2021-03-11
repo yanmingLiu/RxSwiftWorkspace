@@ -13,10 +13,13 @@ extension NSNumber {
         if doubleValue < 1000 {
             return description
         }
+        if doubleValue >= 999999 {
+            return "99.9K"
+        }
         let result = doubleValue / 1000.0
         let num1 = NSNumber(value: result)
         let numberFormatter = NumberFormatter()
-        numberFormatter.maximumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 1
         numberFormatter.roundingMode = .down
         numberFormatter.positiveSuffix = "K"
         numberFormatter.positiveFormat = "#0.0"
@@ -24,7 +27,7 @@ extension NSNumber {
     }
 }
 
-var a:NSNumber = NSNumber(value: 1999)
+var a:NSNumber = NSNumber(value: 999999)
 
 
 let str = a.displayCount()

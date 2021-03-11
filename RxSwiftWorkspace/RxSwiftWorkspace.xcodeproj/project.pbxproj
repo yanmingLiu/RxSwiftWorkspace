@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382819E025FA3AC6006A9AFA /* MassiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382819DF25FA3AC6006A9AFA /* MassiveViewController.swift */; };
+		382819E525FA4C5C006A9AFA /* MVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382819E425FA4C5C006A9AFA /* MVCController.swift */; };
+		382819E825FA4D02006A9AFA /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382819E725FA4D02006A9AFA /* ToDoItem.swift */; };
+		3844308325E7544800D31FC3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3844308225E7544800D31FC3 /* ImageViewController.swift */; };
+		38DA15B225EE0B8600B89A43 /* UICollectionViewMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA15B125EE0B8600B89A43 /* UICollectionViewMove.swift */; };
+		38DA15BB25EE0EF000B89A43 /* EditCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA15B925EE0EF000B89A43 /* EditCollectionViewCell.xib */; };
+		38DA15BC25EE0EF000B89A43 /* EditCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA15BA25EE0EF000B89A43 /* EditCollectionViewCell.swift */; };
 		78915EDC1B8708D8D323C211 /* Pods_RxSwiftWorkspace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E9E9FB450CD6B5DB49115B /* Pods_RxSwiftWorkspace.framework */; };
 		C255A1EE24A5F0D400E3C0F1 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C255A1ED24A5F0D400E3C0F1 /* MineViewController.swift */; };
 		C255A1F024A5F2A700E3C0F1 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C255A1EF24A5F2A700E3C0F1 /* TagsView.swift */; };
@@ -49,7 +56,14 @@
 
 /* Begin PBXFileReference section */
 		042020900BECC8A0C92E4B72 /* Pods-RxSwiftWorkspace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftWorkspace.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftWorkspace/Pods-RxSwiftWorkspace.release.xcconfig"; sourceTree = "<group>"; };
+		382819DF25FA3AC6006A9AFA /* MassiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassiveViewController.swift; sourceTree = "<group>"; };
+		382819E425FA4C5C006A9AFA /* MVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCController.swift; sourceTree = "<group>"; };
+		382819E725FA4D02006A9AFA /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		3844308225E7544800D31FC3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		38BC1B2F25C0323800D31E4C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		38DA15B125EE0B8600B89A43 /* UICollectionViewMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewMove.swift; sourceTree = "<group>"; };
+		38DA15B925EE0EF000B89A43 /* EditCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCollectionViewCell.xib; sourceTree = "<group>"; };
+		38DA15BA25EE0EF000B89A43 /* EditCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCollectionViewCell.swift; sourceTree = "<group>"; };
 		92E9E9FB450CD6B5DB49115B /* Pods_RxSwiftWorkspace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftWorkspace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A676FBFC02F753101685184E /* Pods-RxSwiftWorkspace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftWorkspace.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftWorkspace/Pods-RxSwiftWorkspace.debug.xcconfig"; sourceTree = "<group>"; };
 		C255A1ED24A5F0D400E3C0F1 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +279,13 @@
 				C2EEC08022F5A4ED00422421 /* UIListController.swift */,
 				C255A1ED24A5F0D400E3C0F1 /* MineViewController.swift */,
 				C255A1EF24A5F2A700E3C0F1 /* TagsView.swift */,
+				3844308225E7544800D31FC3 /* ImageViewController.swift */,
+				38DA15BA25EE0EF000B89A43 /* EditCollectionViewCell.swift */,
+				38DA15B925EE0EF000B89A43 /* EditCollectionViewCell.xib */,
+				38DA15B125EE0B8600B89A43 /* UICollectionViewMove.swift */,
+				382819DF25FA3AC6006A9AFA /* MassiveViewController.swift */,
+				382819E425FA4C5C006A9AFA /* MVCController.swift */,
+				382819E725FA4D02006A9AFA /* ToDoItem.swift */,
 			);
 			path = UIList;
 			sourceTree = "<group>";
@@ -434,6 +455,7 @@
 				C2EEC05422F5808B00422421 /* Assets.xcassets in Resources */,
 				C2EEC09622F6BDD500422421 /* clsStru.png in Resources */,
 				C2EEC07422F5811A00422421 /* TabBar.json in Resources */,
+				38DA15BB25EE0EF000B89A43 /* EditCollectionViewCell.xib in Resources */,
 				C258BDA623C431D400C63040 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,7 +513,9 @@
 				C2EEC07522F5811A00422421 /* YMTabBarController.swift in Sources */,
 				C2EEC08422F5AB9000422421 /* SwiftController.swift in Sources */,
 				C2EEC07622F5811A00422421 /* YMNavigationController.swift in Sources */,
+				382819E025FA3AC6006A9AFA /* MassiveViewController.swift in Sources */,
 				C2EEC07722F5811A00422421 /* BaseData.swift in Sources */,
+				38DA15BC25EE0EF000B89A43 /* EditCollectionViewCell.swift in Sources */,
 				C2FAC43C22F95D070089B3E4 /* LoginAPI.swift in Sources */,
 				C274B3A922FC22AA004DF760 /* UIView+Rx.swift in Sources */,
 				C2FCC11422FAC63C001C6A2A /* BaseViewModel.swift in Sources */,
@@ -513,11 +537,15 @@
 				C274B3A722FC0A43004DF760 /* LoginViewModel.swift in Sources */,
 				C2EEC09422F6BC3000422421 /* ClsStruController.swift in Sources */,
 				C255A1EE24A5F0D400E3C0F1 /* MineViewController.swift in Sources */,
+				382819E525FA4C5C006A9AFA /* MVCController.swift in Sources */,
 				C2FCC0FB22FA7EEB001C6A2A /* LoginController.swift in Sources */,
 				C2FCC11122FAC5E4001C6A2A /* String+Ext.swift in Sources */,
 				C2EEC07E22F5A4B700422421 /* RxListController.swift in Sources */,
+				38DA15B225EE0B8600B89A43 /* UICollectionViewMove.swift in Sources */,
 				C2EEC0A122F6C7DF00422421 /* BlockController.swift in Sources */,
 				C2FCC11222FAC5E4001C6A2A /* UIColor+Ext.swift in Sources */,
+				382819E825FA4D02006A9AFA /* ToDoItem.swift in Sources */,
+				3844308325E7544800D31FC3 /* ImageViewController.swift in Sources */,
 				C2EEC0A422F6CCD700422421 /* NotiController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
