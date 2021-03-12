@@ -19,7 +19,7 @@ class SwiftController: BaseTableViewController {
                 "swift类和结构体"
                ]
         vaules = ["SharedController",
-                  "keywordController",
+                  "KeywordController",
                   "ClsStruController"
                  ]
 

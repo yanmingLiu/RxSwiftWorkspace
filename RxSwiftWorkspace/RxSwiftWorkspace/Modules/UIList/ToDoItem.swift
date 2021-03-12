@@ -117,8 +117,13 @@ class ToDoStore {
 }
 
 extension ToDoItem: Hashable {
-    var hashValue: Int {
-        return id.hashValue
+    //'Hashable.hashValue' is deprecated as a protocol requirement; conform type 'ToDoItem' to 'Hashable' by implementing 'hash(into:)' instead
+//    var hashValue: Int {
+//        return id.hashValue
+//    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id.hashValue)
     }
 }
 

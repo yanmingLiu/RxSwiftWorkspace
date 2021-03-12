@@ -28,6 +28,7 @@ PODS:
   - RxSwift (5.1.1)
   - SnapKit (5.0.1)
   - SSCustomTabbar (2.0.6)
+  - SwiftLint (0.43.0)
   - SwiftyAttributes (5.1.1)
   - TangramKit (1.4.2)
   - TextFieldEffects (1.6.0)
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - RxSwift
   - SnapKit
   - SSCustomTabbar
+  - SwiftLint
   - SwiftyAttributes
   - TangramKit
   - TextFieldEffects
@@ -72,6 +74,7 @@ SPEC REPOS:
     - RxSwift
     - SnapKit
     - SSCustomTabbar
+    - SwiftLint
     - SwiftyAttributes
     - TangramKit
     - TextFieldEffects
@@ -95,12 +98,13 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SSCustomTabbar: a52533e429bd40f52ce8d7ecb801f3521fbd56a0
+  SwiftLint: 0c645fdc6feed3e390c1701ab3cc669f88b42752
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
   TangramKit: aad3ab8f9617418c9da96d59cddd71134ae8af83
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: ea9fff5964acba08de3e753597f7efce4bccdf7e
+PODFILE CHECKSUM: aa51e7a64c4a239e4f51041af6538f92b496c5e1
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.1

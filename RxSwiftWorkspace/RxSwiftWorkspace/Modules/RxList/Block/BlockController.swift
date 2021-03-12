@@ -14,7 +14,7 @@ class BlockController: BaseViewController {
         super.viewDidLoad()
 
         // 普通方式
-        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "www.baidu.com")!)) { (data, response, error) in
+        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "www.baidu.com")!)) { (data, _, error) in
 
             guard error == nil else {
                 print("Data Task Error: \(error!)")

@@ -8,12 +8,9 @@
 
 import UIKit
 
-class keywordController: BaseViewController {
-
-
+class KeywordController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
         text.text = """
 
@@ -37,7 +34,5 @@ class keywordController: BaseViewController {
         表示该类只能在当前Swift源文件中访问，且该类不能被继承。不能override。
 
         """
-        
-
     }
 }

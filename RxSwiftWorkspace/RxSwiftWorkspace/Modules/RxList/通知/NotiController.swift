@@ -20,13 +20,6 @@ class NotiController: BaseViewController {
 
         text.frame.origin.y = 145
 
-        /*
-          Optional(
-         [AnyHashable("UIKeyboardFrameBeginUserInfoKey"): NSRect: {{0, 812}, {375, 335}}, AnyHashable("UIKeyboardAnimationCurveUserInfoKey"): 7, AnyHashable("UIKeyboardIsLocalUserInfoKey"): 1, AnyHashable("UIKeyboardBoundsUserInfoKey"): NSRect: {{0, 0}, {375, 335}}, AnyHashable("UIKeyboardCenterBeginUserInfoKey"): NSPoint: {187.5, 979.5},
-         AnyHashable("UIKeyboardFrameEndUserInfoKey"): NSRect: {{0, 477}, {375, 335}}, AnyHashable("UIKeyboardCenterEndUserInfoKey"): NSPoint: {187.5, 644.5}, AnyHashable("UIKeyboardAnimationDurationUserInfoKey"): 0.25]
-         )
-         */
-
         NotificationCenter.default.rx
             .notification(UIWindow.keyboardWillShowNotification)
             .subscribe(onNext: { (notification) in

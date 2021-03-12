@@ -31,6 +31,7 @@ target 'RxSwiftWorkspace' do
     pod "ESTabBarController-swift"
     pod 'AttributedString'
 
+    pod 'SwiftLint'
     
     pod 'LookinServer', :configurations => ['Debug']
 

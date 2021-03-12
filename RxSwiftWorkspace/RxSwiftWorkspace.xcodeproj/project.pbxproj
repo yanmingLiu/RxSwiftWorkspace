@@ -35,7 +35,7 @@
 		C2EEC08722F6A31D00422421 /* SharedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC08622F6A31D00422421 /* SharedController.swift */; };
 		C2EEC08C22F6A9CE00422421 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC08B22F6A9CE00422421 /* Common.swift */; };
 		C2EEC08E22F6AD5C00422421 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC08D22F6AD5C00422421 /* BaseViewController.swift */; };
-		C2EEC09122F6B9B200422421 /* keywordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09022F6B9B200422421 /* keywordController.swift */; };
+		C2EEC09122F6B9B200422421 /* KeywordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09022F6B9B200422421 /* KeywordController.swift */; };
 		C2EEC09422F6BC3000422421 /* ClsStruController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09322F6BC3000422421 /* ClsStruController.swift */; };
 		C2EEC09622F6BDD500422421 /* clsStru.png in Resources */ = {isa = PBXBuildFile; fileRef = C2EEC09522F6BDD500422421 /* clsStru.png */; };
 		C2EEC09922F6C1CD00422421 /* TargetActionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EEC09822F6C1CD00422421 /* TargetActionController.swift */; };
@@ -60,6 +60,7 @@
 		382819E425FA4C5C006A9AFA /* MVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCController.swift; sourceTree = "<group>"; };
 		382819E725FA4D02006A9AFA /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		3844308225E7544800D31FC3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		3845892525FB6D7D0012DA6A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		38BC1B2F25C0323800D31E4C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		38DA15B125EE0B8600B89A43 /* UICollectionViewMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewMove.swift; sourceTree = "<group>"; };
 		38DA15B925EE0EF000B89A43 /* EditCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -88,7 +89,7 @@
 		C2EEC08622F6A31D00422421 /* SharedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedController.swift; sourceTree = "<group>"; };
 		C2EEC08B22F6A9CE00422421 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C2EEC08D22F6AD5C00422421 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		C2EEC09022F6B9B200422421 /* keywordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keywordController.swift; sourceTree = "<group>"; };
+		C2EEC09022F6B9B200422421 /* KeywordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordController.swift; sourceTree = "<group>"; };
 		C2EEC09322F6BC3000422421 /* ClsStruController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClsStruController.swift; sourceTree = "<group>"; };
 		C2EEC09522F6BDD500422421 /* clsStru.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clsStru.png; sourceTree = "<group>"; };
 		C2EEC09822F6C1CD00422421 /* TargetActionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetActionController.swift; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		C2EEC04022F5808900422421 = {
 			isa = PBXGroup;
 			children = (
+				3845892525FB6D7D0012DA6A /* .swiftlint.yml */,
 				38BC1B2F25C0323800D31E4C /* MyPlayground.playground */,
 				C2EEC04B22F5808900422421 /* RxSwiftWorkspace */,
 				C2EEC04A22F5808900422421 /* Products */,
@@ -319,7 +321,7 @@
 		C2EEC08F22F6B99600422421 /* 关键词 */ = {
 			isa = PBXGroup;
 			children = (
-				C2EEC09022F6B9B200422421 /* keywordController.swift */,
+				C2EEC09022F6B9B200422421 /* KeywordController.swift */,
 			);
 			path = "关键词";
 			sourceTree = "<group>";
@@ -403,6 +405,7 @@
 				C2EEC04622F5808900422421 /* Frameworks */,
 				C2EEC04722F5808900422421 /* Resources */,
 				3E74D8491F39A2305E9DEE15 /* [CP] Embed Pods Frameworks */,
+				3845892425FB6CA20012DA6A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -463,6 +466,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3845892425FB6CA20012DA6A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		3E74D8491F39A2305E9DEE15 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -531,7 +551,7 @@
 				C2EEC04D22F5808900422421 /* AppDelegate.swift in Sources */,
 				C2EEC08122F5A4ED00422421 /* UIListController.swift in Sources */,
 				C255A1F024A5F2A700E3C0F1 /* TagsView.swift in Sources */,
-				C2EEC09122F6B9B200422421 /* keywordController.swift in Sources */,
+				C2EEC09122F6B9B200422421 /* KeywordController.swift in Sources */,
 				C274B3AF22FD0C81004DF760 /* CodeView.swift in Sources */,
 				C2EEC08722F6A31D00422421 /* SharedController.swift in Sources */,
 				C274B3A722FC0A43004DF760 /* LoginViewModel.swift in Sources */,
