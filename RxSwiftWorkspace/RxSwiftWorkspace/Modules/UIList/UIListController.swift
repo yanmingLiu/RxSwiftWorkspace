@@ -13,7 +13,8 @@ class UIListController: UITableViewController {
                 "ImageViewController",
                 "UICollectionViewMove",
                 "MassiveViewController",
-                "MVCController"
+                "MVCController",
+                "TitleTagViewController"
     ]
 
     override func viewDidLoad() {

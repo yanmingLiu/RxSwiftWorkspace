@@ -11,6 +11,7 @@
 		382819E525FA4C5C006A9AFA /* MVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382819E425FA4C5C006A9AFA /* MVCController.swift */; };
 		382819E825FA4D02006A9AFA /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382819E725FA4D02006A9AFA /* ToDoItem.swift */; };
 		3844308325E7544800D31FC3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3844308225E7544800D31FC3 /* ImageViewController.swift */; };
+		38D5E7A525FF2D1B007C35DE /* TitleTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5E7A425FF2D1B007C35DE /* TitleTagViewController.swift */; };
 		38DA15B225EE0B8600B89A43 /* UICollectionViewMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA15B125EE0B8600B89A43 /* UICollectionViewMove.swift */; };
 		38DA15BB25EE0EF000B89A43 /* EditCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA15B925EE0EF000B89A43 /* EditCollectionViewCell.xib */; };
 		38DA15BC25EE0EF000B89A43 /* EditCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA15BA25EE0EF000B89A43 /* EditCollectionViewCell.swift */; };
@@ -62,6 +63,7 @@
 		3844308225E7544800D31FC3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		3845892525FB6D7D0012DA6A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		38BC1B2F25C0323800D31E4C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		38D5E7A425FF2D1B007C35DE /* TitleTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTagViewController.swift; sourceTree = "<group>"; };
 		38DA15B125EE0B8600B89A43 /* UICollectionViewMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewMove.swift; sourceTree = "<group>"; };
 		38DA15B925EE0EF000B89A43 /* EditCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCollectionViewCell.xib; sourceTree = "<group>"; };
 		38DA15BA25EE0EF000B89A43 /* EditCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				382819DF25FA3AC6006A9AFA /* MassiveViewController.swift */,
 				382819E425FA4C5C006A9AFA /* MVCController.swift */,
 				382819E725FA4D02006A9AFA /* ToDoItem.swift */,
+				38D5E7A425FF2D1B007C35DE /* TitleTagViewController.swift */,
 			);
 			path = UIList;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				C2FCC11122FAC5E4001C6A2A /* String+Ext.swift in Sources */,
 				C2EEC07E22F5A4B700422421 /* RxListController.swift in Sources */,
 				38DA15B225EE0B8600B89A43 /* UICollectionViewMove.swift in Sources */,
+				38D5E7A525FF2D1B007C35DE /* TitleTagViewController.swift in Sources */,
 				C2EEC0A122F6C7DF00422421 /* BlockController.swift in Sources */,
 				C2FCC11222FAC5E4001C6A2A /* UIColor+Ext.swift in Sources */,
 				382819E825FA4D02006A9AFA /* ToDoItem.swift in Sources */,
