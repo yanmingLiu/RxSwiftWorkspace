@@ -2,6 +2,10 @@
 
 import Foundation
 
+var b: Bool = true
+b.toggle()
+print(b)
+
 let vegetable = "red pepper"
 switch vegetable {
 case "celery":

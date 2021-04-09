@@ -22,5 +22,6 @@
         <page name='callAsFunction'/>
         <page name='MVC'/>
         <page name='Set'/>
+        <page name='类和结构体'/>
     </pages>
 </playground>

@@ -9,6 +9,7 @@ PODS:
     - Kingfisher/Core (= 5.14.0)
   - Kingfisher/Core (5.14.0)
   - LookinServer (1.0.0)
+  - MJRefresh (3.5.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - Kingfisher
   - LookinServer
+  - MJRefresh
   - Moya/RxSwift
   - "NSObject+Rx"
   - RxCocoa
@@ -66,6 +68,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - LookinServer
+    - MJRefresh
     - Moya
     - "NSObject+Rx"
     - RxCocoa
@@ -90,6 +93,7 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: 7b64389a43139c903ec434788344c288217c792d
   LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -105,6 +109,6 @@ SPEC CHECKSUMS:
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: aa51e7a64c4a239e4f51041af6538f92b496c5e1
+PODFILE CHECKSUM: c84a9574ca81ece922ad825747bf0b59daa6d790
 
 COCOAPODS: 1.10.1

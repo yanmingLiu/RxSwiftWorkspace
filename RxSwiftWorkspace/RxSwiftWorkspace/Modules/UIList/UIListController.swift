@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MJRefresh
 
 class UIListController: UITableViewController {
     let list = ["MineViewController",
@@ -19,8 +20,17 @@ class UIListController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell2")
+  
+        let header = MJRefreshNormalHeader { [weak self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self?.tableView.mj_header?.endRefreshing()
+            }
+        }
+        header.isAutomaticallyChangeAlpha = true
+        tableView.mj_header = header
+        
     }
 
     // MARK: - Table view data source
