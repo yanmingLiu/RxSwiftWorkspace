@@ -137,11 +137,10 @@ print(numbers.dropFirst(4))
 // dropLast
 print(numbers.dropLast(2))
 
-
 // MARK: - transforming
 
 // map: 返回包含在序列元素上映射给定闭包的结果的数组。
-print(arrR.map({$0.uppercased()}))
+print(arrR.map({ $0.uppercased() }))
 
 // flatMap: 返回一个数组，该数组包含调用给定变换的结果与该序列的每个元素的连接。
 let mapped = numbers.map { Array(repeating: $0, count: $0) }
@@ -154,13 +153,15 @@ let possibleNumbers = ["1", "2", "three", "///4///", "5"]
 let compactMapped: [Int] = possibleNumbers.compactMap { str in Int(str) }
 print(compactMapped)
 
-// reduce 减少
-let numberSum = numbers.reduce(0, { x, y in
-    x + y
-})
+// reduce 合并
+let numberSum = numbers.reduce(0, { $0 + $1 })
 print(numberSum)
 
+let reduceArr = [1,2,3].reduce(""){$0 + "\($1)"}
+print(reduceArr)
+
 // MARK: - iterating 迭代
+
 for word in numbers {
     print(word)
 }
@@ -174,6 +175,7 @@ for (n, c) in "Swift".enumerated() {
 }
 
 // MARK: - reordering 重排序
+
 var students = ["Kofi", "Abena", "Peter", "Kweku", "Akosua"]
 students.sort()
 print(students)
@@ -184,8 +186,8 @@ print(arrR.reversed())
 // sorted
 print(arrR.sorted(by: { $0 > $1 }))
 
-
 // MARK: split : str -> arr
+
 let line = "BLANCHE:   I don't want realism. I want magic!"
 print(line.split(separator: " "))
 print(line.split(separator: " ", maxSplits: 1))

@@ -10,28 +10,7 @@ import Foundation
 import UIKit
 
 
-func safeAreaBottom() -> CGFloat {
-    if #available(iOS 11.0, *) {
-        return (UIApplication.shared.delegate as? AppDelegate)?.window?.safeAreaInsets.bottom ?? 0.0
-    }
-    return CGFloat(0.0)
-}
-
-func isIphoneX() -> Bool {
-    if UIDevice.current.userInterfaceIdiom != .phone {
-        return true
-    }
-    if #available(iOS 11.0, *) {
-        let bootom = safeAreaBottom()
-        if bootom > 0.0 {
-            return true
-        }
-    }
-    return false
-}
-
-
-public func adaptWidth(designWidth: CGFloat = 375.0 , _ vaule: CGFloat) -> CGFloat {
+public func adaptWidth(designWidth: CGFloat = 375.0, _ vaule: CGFloat) -> CGFloat {
     return UIScreen.main.bounds.size.width / designWidth * vaule
 }
 
@@ -39,18 +18,18 @@ extension UIView {
     /// 屏幕适配
     func adaptSubViews() {
         // 约束
-        for cons in self.constraints {
+        for cons in constraints {
             cons.constant = adaptWidth(cons.constant)
         }
         // 圆角
-        self.layer.cornerRadius = adaptWidth(self.layer.cornerRadius)
+        layer.cornerRadius = adaptWidth(layer.cornerRadius)
 
         // 字体大小
-        if self.isKind(of: UILabel.self) == true {
+        if isKind(of: UILabel.self) == true {
             let lbl = self as! UILabel
-            lbl.font =  UIFont(name: lbl.font.fontName, size: adaptWidth(lbl.font.pointSize))
+            lbl.font = UIFont(name: lbl.font.fontName, size: adaptWidth(lbl.font.pointSize))
         }
-        if self.isKind(of: UITextField.self) == true {
+        if isKind(of: UITextField.self) == true {
             let tf = self as! UITextField
             guard let f = tf.font else {
                 return
@@ -58,7 +37,7 @@ extension UIView {
             tf.font = UIFont(name: f.fontName, size: adaptWidth(f.pointSize))
         }
 
-        if self.isKind(of: UITextView.self) == true {
+        if isKind(of: UITextView.self) == true {
             let tf = self as! UITextView
             guard let f = tf.font else {
                 return
@@ -66,20 +45,19 @@ extension UIView {
             tf.font = UIFont(name: f.fontName, size: adaptWidth(f.pointSize))
         }
 
-        if self.isKind(of: UIButton.self) == true {
+        if isKind(of: UIButton.self) == true {
             let btn = self as! UIButton
             if let f = btn.titleLabel?.font {
                 btn.titleLabel?.font = UIFont(name: f.fontName, size: adaptWidth(f.pointSize))
             }
         }
 
-        for v in self.subviews {
+        for v in subviews {
             v.adaptSubViews()
         }
-        self.setNeedsLayout()
-        self.layoutIfNeeded()
+        setNeedsLayout()
+        layoutIfNeeded()
     }
-
 
     /// 添加圆角
     ///
@@ -87,10 +65,10 @@ extension UIView {
     ///   - direction: 圆角方向
     ///   - vaule: 圆角值
     func addRadius(direction: UIRectCorner = .allCorners, vaule: CGFloat) {
-        let masPath = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: direction, cornerRadii: CGSize(width: vaule, height: vaule))
+        let masPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: direction, cornerRadii: CGSize(width: vaule, height: vaule))
         let masLayer = CAShapeLayer()
         masLayer.path = masPath.cgPath
-        masLayer.frame = self.bounds
+        masLayer.frame = bounds
 
         layer.mask = masLayer
         layer.contentsScale = UIScreen.main.scale
@@ -124,5 +102,3 @@ extension UIView {
         }
     }
 }
-
-

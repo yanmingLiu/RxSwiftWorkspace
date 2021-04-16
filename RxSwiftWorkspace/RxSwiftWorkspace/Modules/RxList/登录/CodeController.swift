@@ -33,7 +33,7 @@ class CodeController: BaseViewController {
 
         titleLabel.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(25)
-            make.top.equalToSuperview().offset(isIphoneX() ? 88 : 64)
+            make.top.equalToSuperview().offset(88)
         }
 
         let phoneLabel = UILabel().then {
