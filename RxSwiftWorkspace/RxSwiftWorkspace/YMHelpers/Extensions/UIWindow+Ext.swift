@@ -42,3 +42,19 @@ extension UIScreen {
         return UIScreen.main.bounds.size.height
     }
 }
+
+
+extension UIDevice {
+    static var isIphoneX: Bool  {
+        if UIDevice.current.userInterfaceIdiom != .phone {
+            return true
+        }
+        if #available(iOS 11.0, *) {
+            let bottom = UIWindow.safeAreaInsets.bottom
+            if bottom > 0.0 {
+                return true
+            }
+        }
+        return false
+    }
+}

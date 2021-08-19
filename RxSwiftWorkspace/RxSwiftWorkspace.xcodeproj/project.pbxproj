@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380170A226CE8E9E00672A16 /* SubStringCnotroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380170A126CE8E9E00672A16 /* SubStringCnotroller.swift */; };
 		382819E025FA3AC6006A9AFA /* MassiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382819DF25FA3AC6006A9AFA /* MassiveViewController.swift */; };
 		382819E525FA4C5C006A9AFA /* MVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382819E425FA4C5C006A9AFA /* MVCController.swift */; };
 		382819E825FA4D02006A9AFA /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382819E725FA4D02006A9AFA /* ToDoItem.swift */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		042020900BECC8A0C92E4B72 /* Pods-RxSwiftWorkspace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftWorkspace.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftWorkspace/Pods-RxSwiftWorkspace.release.xcconfig"; sourceTree = "<group>"; };
+		380170A126CE8E9E00672A16 /* SubStringCnotroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubStringCnotroller.swift; sourceTree = "<group>"; };
 		382819DF25FA3AC6006A9AFA /* MassiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassiveViewController.swift; sourceTree = "<group>"; };
 		382819E425FA4C5C006A9AFA /* MVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCController.swift; sourceTree = "<group>"; };
 		382819E725FA4D02006A9AFA /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				C2EEC08F22F6B99600422421 /* 关键词 */,
 				C2EEC08522F6A2BD00422421 /* 单利 */,
 				C2EEC08322F5AB9000422421 /* SwiftController.swift */,
+				380170A126CE8E9E00672A16 /* SubStringCnotroller.swift */,
 			);
 			path = SwiftList;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				C2FCC0FB22FA7EEB001C6A2A /* LoginController.swift in Sources */,
 				C2FCC11122FAC5E4001C6A2A /* String+Ext.swift in Sources */,
 				C2EEC07E22F5A4B700422421 /* RxListController.swift in Sources */,
+				380170A226CE8E9E00672A16 /* SubStringCnotroller.swift in Sources */,
 				38DA15B225EE0B8600B89A43 /* UICollectionViewMove.swift in Sources */,
 				38D5E7A525FF2D1B007C35DE /* TitleTagViewController.swift in Sources */,
 				C2EEC0A122F6C7DF00422421 /* BlockController.swift in Sources */,

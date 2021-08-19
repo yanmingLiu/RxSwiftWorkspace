@@ -2,7 +2,23 @@
 
 import Foundation
 
+var arr:[Any] = [1,2,"三"]
+arr = arr.filter({ x in
+    return x is String
+})
+print(arr)
+
+
+
 // MARK: - 创建
+
+let v = 136.0
+
+let s = v / 60.0
+let m = v.truncatingRemainder(dividingBy: 60.0)
+
+print(s)
+print(m)
 
 var arrR = ["I", "just", "do", "it"]
 
@@ -157,7 +173,7 @@ print(compactMapped)
 let numberSum = numbers.reduce(0, { $0 + $1 })
 print(numberSum)
 
-let reduceArr = [1,2,3].reduce(""){$0 + "\($1)"}
+let reduceArr = [1, 2, 3].reduce("") { $0 + "\($1)" }
 print(reduceArr)
 
 // MARK: - iterating 迭代

@@ -3,11 +3,6 @@
 import UIKit
 import Foundation
 
-let d = Date().timeIntervalSince1970
-
-print(d)
-
-
 let myQueue = DispatchQueue(label: "com.myapp.myq")
 
 let block = DispatchWorkItem {

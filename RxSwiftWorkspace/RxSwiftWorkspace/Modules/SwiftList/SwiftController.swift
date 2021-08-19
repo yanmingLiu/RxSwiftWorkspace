@@ -16,16 +16,16 @@ class SwiftController: BaseTableViewController {
 
         keys = ["swift单利",
                 "swift关键词",
-                "swift类和结构体"
+                "swift类和结构体",
+                "子字符串"
                ]
         vaules = ["SharedController",
                   "KeywordController",
-                  "ClsStruController"
+                  "ClsStruController",
+                  "SubStringCnotroller"
                  ]
-
 
     }
 
    
-
 }
