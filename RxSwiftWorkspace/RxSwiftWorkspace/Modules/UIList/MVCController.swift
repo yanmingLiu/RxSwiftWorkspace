@@ -13,29 +13,29 @@ class MVCController: UITableViewController {
     private let cellIdentifier = "ToDoItemCell"
 
     weak var addButton: UIBarButtonItem?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
         addButton = navigationItem.rightBarButtonItem
-        
+
         NotificationCenter.default.addObserver(self, selector: #selector(todoItemsDidChange), name: .toDoStoreDidChangedNotification, object: nil)
     }
-    
+
     private func syncTableView(for behavior: ToDoStore.ChangeBehavior) {
         switch behavior {
-        case .add(let indexes):
+        case let .add(indexes):
             let indexPathes = indexes.map { IndexPath(row: $0, section: 0) }
             tableView.insertRows(at: indexPathes, with: .automatic)
-        case .remove(let indexes):
+        case let .remove(indexes):
             let indexPathes = indexes.map { IndexPath(row: $0, section: 0) }
             tableView.deleteRows(at: indexPathes, with: .automatic)
         case .reload:
             tableView.reloadData()
         }
     }
-    
+
     private func updateAddButtonState() {
         addButton?.isEnabled = ToDoStore.shared.count < 10
     }
@@ -45,29 +45,29 @@ class MVCController: UITableViewController {
         syncTableView(for: behavior)
         updateAddButtonState()
     }
-    
-    @objc func addButtonPressed(_ sender: Any) {
+
+    @objc func addButtonPressed(_: Any) {
         let store = ToDoStore.shared
         let newCount = store.count + 1
         let title = "ToDo Item \(newCount)"
-        
+
         store.append(item: .init(title: title))
     }
 }
 
 extension MVCController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return ToDoStore.shared.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         cell.textLabel?.text = ToDoStore.shared.item(at: indexPath.row).title
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, view, done in
+
+    override func tableView(_: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, done in
             ToDoStore.shared.remove(at: indexPath.row)
             done(true)
         }

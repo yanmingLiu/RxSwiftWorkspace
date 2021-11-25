@@ -9,7 +9,6 @@
 import UIKit
 
 class CodeController: BaseViewController {
-
     public var phone = ""
 
     override func viewDidLoad() {
@@ -18,9 +17,7 @@ class CodeController: BaseViewController {
         setupUI()
     }
 
-
     private func setupUI() {
-
         view.backgroundColor = .white
         text.removeFromSuperview()
 
@@ -31,19 +28,19 @@ class CodeController: BaseViewController {
         }
         view.addSubview(titleLabel)
 
-        titleLabel.snp.makeConstraints { (make) in
+        titleLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(25)
             make.top.equalToSuperview().offset(88)
         }
 
         let phoneLabel = UILabel().then {
-            $0.text = "请输入 " + phone[0..<3] + "******" + phone[9..<12] + " 收到的验证码"
+            $0.text = "请输入 " + phone[0 ..< 3] + "******" + phone[9 ..< 12] + " 收到的验证码"
             $0.font = .systemFont(ofSize: 15)
             $0.textColor = .hexString("#484848")
         }
         view.addSubview(phoneLabel)
 
-        phoneLabel.snp.makeConstraints { (make) in
+        phoneLabel.snp.makeConstraints { make in
             make.left.equalTo(titleLabel)
             make.top.equalTo(titleLabel.snp_bottomMargin).offset(10)
         }
@@ -57,23 +54,21 @@ class CodeController: BaseViewController {
         }
         view.addSubview(code)
 
-        code.snp.makeConstraints { (make) in
+        code.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(25)
             make.right.equalToSuperview().offset(-25)
             make.height.equalTo(64)
             make.top.equalTo(phoneLabel.snp_bottomMargin).offset(30)
         }
 
-
-        //To obtain Input Text
+        // To obtain Input Text
         code.callBacktext = { str in
             if str == "1234" {
-
             } else {
                 code.clearnText(error: "error")
             }
         }
-        
+
         view.adaptSubViews()
     }
 }

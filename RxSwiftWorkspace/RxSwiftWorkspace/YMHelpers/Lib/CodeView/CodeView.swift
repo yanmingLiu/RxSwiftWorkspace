@@ -8,51 +8,47 @@
 
 import UIKit
 
-//enum Length: AsunFloct {
+// enum Length: AsunFloct {
 //    case onceWidth  = 40  //横线宽度
 //    case onceHeight = 1 //横线高度
-//}
+// }
 
 class CodeView: UIView {
-    
-    var callBacktext:((String)->())?
-    
-    lazy var Base:AsunBasicAttributes = AsunBasicAttributes()
-    
+    var callBacktext: ((String) -> Void)?
+
+    lazy var Base = AsunBasicAttributes()
+
     lazy var textFiled = AsunText()
-    
-    lazy var lineArr:[UIView] = []
-    
-    lazy var labelArr:[UILabel] = []
-    
-    lazy var layerArr:[CALayer] = []
 
-    var errorOrclean:String!
-    
-    lazy var width:CGFloat = CGFloat()
-    lazy var height:CGFloat = CGFloat()
+    lazy var lineArr: [UIView] = []
 
-    open var lineSpace : CGFloat = 10.0
+    lazy var labelArr: [UILabel] = []
 
-    var onceWidth : CGFloat = 40.0
-    var onceHeight : CGFloat = 1.0
-    
-    
+    lazy var layerArr: [CALayer] = []
+
+    var errorOrclean: String!
+
+    lazy var width = CGFloat()
+    lazy var height = CGFloat()
+
+    open var lineSpace: CGFloat = 10.0
+
+    var onceWidth: CGFloat = 40.0
+    var onceHeight: CGFloat = 1.0
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     override func layoutSubviews() {
+        width = frame.size.width
+        height = frame.size.height
 
-        width = self.frame.size.width
-        height = self.frame.size.height
-
-        onceWidth = (width - lineSpace*(Base.codeNum - 1))/Base.codeNum
+        onceWidth = (width - lineSpace * (Base.codeNum - 1)) / Base.codeNum
 
         creatTextView()
         creatInputLabel()
@@ -60,42 +56,45 @@ class CodeView: UIView {
     }
 }
 
-//MARK: CreatUI
-extension CodeView {
+// MARK: CreatUI
 
+private extension CodeView {
     // MARK: CreatTextView
-    fileprivate func creatTextView() {
+
+    func creatTextView() {
         textFiled = Base.textFiled
         textFiled.becomeFirstResponder()
         textFiled.autocapitalizationType = .none
         textFiled.keyboardType = .numberPad
         addSubview(textFiled)
-        
+
         textFiled.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
 
-    //MARK: CreatLineView
-    fileprivate func creatLineView() {
+    // MARK: CreatLineView
+
+    func creatLineView() {
         for num in 0 ..< Int(Base.codeNum) {
-            //表达式太长 拆分两步骤
-            let x = CGFloat(num)*(lineSpace + onceWidth)
-            let lineView = UIView(frame: CGRect(x: x, y: height -  onceHeight, width: onceWidth, height: 2))
+            // 表达式太长 拆分两步骤
+            let x = CGFloat(num) * (lineSpace + onceWidth)
+            let lineView = UIView(frame: CGRect(x: x, y: height - onceHeight, width: onceWidth, height: 2))
             lineView.backgroundColor = Base.lineColor
             addSubview(lineView)
             lineArr.append(lineView)
         }
     }
 
-    //MARK: CreatLabel
-    fileprivate func creatInputLabel() {
+    // MARK: CreatLabel
+
+    func creatInputLabel() {
         for num in 0 ..< Int(Base.codeNum) {
-            //表达式太长 拆分两步骤
-            let x = CGFloat(num)*(onceWidth + lineSpace)
-            let label = UILabel(frame: CGRect(x:x, y: 0, width: onceWidth, height: height -  2))
+            // 表达式太长 拆分两步骤
+            let x = CGFloat(num) * (onceWidth + lineSpace)
+            let label = UILabel(frame: CGRect(x: x, y: 0, width: onceWidth, height: height - 2))
             label.textColor = Base.textColor
             label.font = Base.fontNum
             label.textAlignment = .center
-            let path = UIBezierPath(rect: CGRect(x: (label.frame.width-2)/2, y: 5, width: 2, height: label.frame.height-10))
+            let path = UIBezierPath(rect: CGRect(x: (label.frame.width - 2) / 2, y: 5, width: 2, height: label.frame.height - 10))
             let lineLayer = CAShapeLayer()
             lineLayer.path = path.cgPath
             lineLayer.fillColor = Base.cursorColor.cgColor
@@ -113,9 +112,10 @@ extension CodeView {
     }
 }
 
-//MARK: Action
+// MARK: Action
+
 extension CodeView {
-    @objc fileprivate func textFieldDidChange(filed:AsunText) {
+    @objc fileprivate func textFieldDidChange(filed _: AsunText) {
         labelArr.forEach {
             $0.text = nil
         }
@@ -126,15 +126,15 @@ extension CodeView {
             }
         }
         if errorOrclean == "error" {
-            self.lineArr.forEach({ (view) in
+            lineArr.forEach { view in
                 view.backgroundColor = self.Base.errorlineViewColor
                 loadShakeAnimationForView(view: view)
-            })
-            
+            }
+
             UIView.animate(withDuration: 1) {
-                self.lineArr.forEach({ (view) in
+                self.lineArr.forEach { view in
                     view.backgroundColor = self.Base.lineColor
-                })
+                }
                 for i in 0 ..< (self.textFiled.text?.count)! {
                     if i < self.lineArr.count {
                         (self.lineArr[i] as UIView).backgroundColor = self.Base.lineInputColor
@@ -143,33 +143,31 @@ extension CodeView {
             }
             errorOrclean = ""
         } else {
-            lineArr.forEach { (view) in
+            lineArr.forEach { view in
                 view.backgroundColor = self.Base.lineColor
             }
-            for i in 0 ..< (self.textFiled.text?.count)! {
-                if i < self.lineArr.count {
-                    (self.lineArr[i] as UIView).backgroundColor = self.Base.lineInputColor
+            for i in 0 ..< (textFiled.text?.count)! {
+                if i < lineArr.count {
+                    (lineArr[i] as UIView).backgroundColor = Base.lineInputColor
                 }
             }
-            
         }
-        layerArr.forEach { (layer) in
+        layerArr.forEach { layer in
             layer.isHidden = true
         }
-        
+
         if (textFiled.text?.count)! < Int(Base.codeNum) {
             layerArr[(textFiled.text?.count)!].isHidden = false
         }
-        
+
         if (textFiled.text?.count)! == Int(Base.codeNum) {
-            if let call = self.callBacktext {
+            if let call = callBacktext {
                 call(textFiled.text!)
             }
         }
-        
     }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+    func textField(_ textField: UITextField, shouldChangeCharactersIn _: NSRange, replacementString string: String) -> Bool {
         if string == "\n" {
             textFiled.resignFirstResponder()
             return false
@@ -181,23 +179,24 @@ extension CodeView {
             return true
         }
     }
-    
-    func clearnText(error:String) {
-        self.errorOrclean = error
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {[unowned self] in
+
+    func clearnText(error: String) {
+        errorOrclean = error
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) { [unowned self] in
             self.textFiled.text = ""
             self.textFieldDidChange(filed: self.textFiled)
         }
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.textFiled.becomeFirstResponder()
+
+    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
+        textFiled.becomeFirstResponder()
     }
 }
 
-//MARK: Animation
+// MARK: Animation
+
 extension CodeView {
-    public func alphaChangge() -> CABasicAnimation{
+    public func alphaChangge() -> CABasicAnimation {
         let alpheAnimation = CABasicAnimation()
         alpheAnimation.keyPath = "opacity"
         alpheAnimation.fromValue = 1.0
@@ -209,8 +208,8 @@ extension CodeView {
         alpheAnimation.isRemovedOnCompletion = false
         return alpheAnimation
     }
-    
-    public func loadShakeAnimationForView(view:UIView) {
+
+    public func loadShakeAnimationForView(view: UIView) {
         let layer = view.layer
         let point = layer.position
         let y = CGPoint(x: point.x - 2, y: point.y)

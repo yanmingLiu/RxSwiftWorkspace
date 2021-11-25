@@ -11,9 +11,9 @@ import UIKit
 struct TDoItem {
     let id: UUID
     let title: String
-    
+
     init(title: String) {
-        self.id = UUID()
+        id = UUID()
         self.title = title
     }
 }
@@ -40,16 +40,15 @@ struct TDoItem {
  也就是说，UI 操作不仅导致了 Model 的变更，还同时导致了 UI 的变化。
  理想化的数据流动应该是单向的：UI 操作 -> 经由 View Controller 进行模型更新 -> 新的模型经由 View Controller 更新 UI -> 等待新的 UI 操作，
  而在例子中，我们变成了“经由 View Controller 进行模型更新以及 UI 操作”。虽然看起来这是很不起眼的变更，但是会在项目复杂后带来麻烦。
- 
+
  */
 
 private let cellIdentifier = "ToDoItemCell"
 
-
 class MassiveViewController: UITableViewController {
     var items: [TDoItem] = []
     weak var addButton: UIBarButtonItem?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
@@ -57,33 +56,32 @@ class MassiveViewController: UITableViewController {
         addButton = navigationItem.rightBarButtonItem
     }
 
-    @objc func addButtonPressed(_ sender: Any) {
+    @objc func addButtonPressed(_: Any) {
         let newCount = items.count + 1
         let title = "ToDo Item \(newCount)"
         items.append(.init(title: title))
         let indexPath = IndexPath(row: newCount - 1, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
-        
+
         if newCount >= 10 {
             addButton?.isEnabled = false
         }
     }
 }
 
-
 extension MassiveViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return items.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         cell.textLabel?.text = items[indexPath.row].title
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, view, done in
+
+    override func tableView(_: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, done in
             self.items.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             if self.items.count < 10 {

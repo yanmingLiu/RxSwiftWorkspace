@@ -15,7 +15,7 @@ extension NSNumber {
         if doubleValue < 1000 {
             return description
         }
-        if doubleValue >= 999999 {
+        if doubleValue >= 999_999 {
             return "999.9K+"
         }
         let result = doubleValue / 1000.0

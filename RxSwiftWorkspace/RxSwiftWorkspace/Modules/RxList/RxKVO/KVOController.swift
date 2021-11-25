@@ -9,22 +9,18 @@
 import UIKit
 
 class KVOController: BaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        let scrollView = UIScrollView(frame: self.view.bounds)
+        let scrollView = UIScrollView(frame: view.bounds)
         scrollView.backgroundColor = UIColor.random
         scrollView.contentSize = CGSize(width: view.bounds.width, height: 2000)
         view.addSubview(scrollView)
 
         scrollView.rx.contentOffset
-            .subscribe({ (contentOffset) in
+            .subscribe { contentOffset in
                 print("contentOffset: \(contentOffset)")
-            })
+            }
             .disposed(by: rx.disposeBag)
     }
-
-    
 }

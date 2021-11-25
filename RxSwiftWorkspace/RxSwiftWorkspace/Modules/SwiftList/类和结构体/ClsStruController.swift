@@ -9,9 +9,7 @@
 import UIKit
 
 class ClsStruController: BaseViewController {
-
     var scrollView = UIScrollView()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +25,4 @@ class ClsStruController: BaseViewController {
 
         scrollView.contentSize = imgv.bounds.size
     }
-
-
 }

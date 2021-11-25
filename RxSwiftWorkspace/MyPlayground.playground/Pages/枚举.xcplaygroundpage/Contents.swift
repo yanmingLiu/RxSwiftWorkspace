@@ -2,6 +2,33 @@
 
 import Foundation
 
+// 递归枚举
+enum RE {
+    case v(String)
+    indirect case node(l:RE, r:RE)
+}
+let lNode = RE.v("left")
+let rNode = RE.v("right")
+let pNode = RE.node(l: lNode, r: rNode)
+switch pNode {
+case .v(let string):
+    print(string)
+case .node(let l, let r):
+    print(l,r)
+    switch l {
+    case .v(let string):
+        print(string)
+    case .node(let l, let r):
+        print(l, r)
+    }
+    switch r {
+    case .v(let string):
+        print(string)
+    case .node(let l, let r):
+        print(l, r)
+    }
+}
+
 // 使用 enum 来创建一个枚举。就像类和其他所有命名类型一样，枚举可以包含方法。
 enum Rank: Int {
     case ace = 1
@@ -26,7 +53,7 @@ let ace = Rank.ace
 let aceRawValue = ace.rawValue
 
 /*
- wift 按照从 0 开始每次加 1 的方式为原始值进行赋值，不过你可以通过显式赋值进行改变。在上面的例子中，
+ swift 按照从 0 开始每次加 1 的方式为原始值进行赋值，不过你可以通过显式赋值进行改变。在上面的例子中，
  Ace 被显式赋值为 1，并且剩下的原始值会按照顺序赋值。你也可以使用字符串或者浮点数作为枚举的原始值。
  使用 rawValue 属性来访问一个枚举成员的原始值。
  使用 init?(rawValue:) 初始化构造器来从原始值创建一个枚举实例。如果存在与原始值相应的枚举成员就返回该枚举成员，否则就返回 nil。

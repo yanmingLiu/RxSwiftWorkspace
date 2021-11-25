@@ -10,19 +10,16 @@ import Foundation
 import Moya
 import RxSwift
 
-
-let UserProvider = MoyaProvider<LoginAPI>(endpointClosure:MoyaProvider.defaultEndpointMapping,
-                                         plugins: [BaseAPI.networkActivityPlugin])
-
+let UserProvider = MoyaProvider<LoginAPI>(endpointClosure: MoyaProvider.defaultEndpointMapping,
+                                          plugins: [BaseAPI.networkActivityPlugin])
 
 enum LoginAPI {
     case code(phone: String)
 
-    case login(phone: String , code : String)
+    case login(phone: String, code: String)
 }
 
-
-extension LoginAPI : TargetType {
+extension LoginAPI: TargetType {
     var baseURL: URL {
         return BaseAPI.baseURL
     }
@@ -39,7 +36,6 @@ extension LoginAPI : TargetType {
 
     var method: Moya.Method {
         switch self {
-
         default:
             return .post
         }
@@ -52,7 +48,7 @@ extension LoginAPI : TargetType {
     var task: Task {
         switch self {
         case let .code(phone: phone):
-            return .requestParameters(parameters: ["phone":phone],
+            return .requestParameters(parameters: ["phone": phone],
                                       encoding: URLEncoding.default)
 
         default:
@@ -60,9 +56,7 @@ extension LoginAPI : TargetType {
         }
     }
 
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return BaseAPI.headers
     }
-
-
 }

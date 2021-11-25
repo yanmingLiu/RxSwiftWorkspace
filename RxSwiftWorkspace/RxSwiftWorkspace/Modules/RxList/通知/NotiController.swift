@@ -9,11 +9,10 @@
 import UIKit
 
 class NotiController: BaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tf = UITextField(frame: CGRect(x: 20, y: 100, width: 120, height: 35));
+        let tf = UITextField(frame: CGRect(x: 20, y: 100, width: 120, height: 35))
         tf.backgroundColor = UIColor.white
         tf.placeholder = "输入框"
         view.addSubview(tf)
@@ -22,27 +21,25 @@ class NotiController: BaseViewController {
 
         NotificationCenter.default.rx
             .notification(UIWindow.keyboardWillShowNotification)
-            .subscribe(onNext: { (notification) in
+            .subscribe(onNext: { notification in
 
-                let info = notification.userInfo as! [String : Any]
+                let info = notification.userInfo as! [String: Any]
 
                 let rect = info[UIWindow.keyboardFrameEndUserInfoKey] as! CGRect
-                let height = rect.size.height;
+                let height = rect.size.height
 
                 let beginRect = info[UIWindow.keyboardFrameBeginUserInfoKey] as! CGRect
                 let endRect = rect
 
                 dlog("keyBordInfo.height = \(height)")
                 // 第三方键盘回调三次问题，监听仅执行最后一次
-                if(beginRect.size.height > 0 && (beginRect.origin.y - endRect.origin.y > 0)){
-
-                    //do someing
-                    dlog("------1-------\(beginRect)");
+                if beginRect.size.height > 0, beginRect.origin.y - endRect.origin.y > 0 {
+                    // do someing
+                    dlog("------1-------\(beginRect)")
                     dlog("------2-------\(endRect)")
                 }
             })
             .disposed(by: rx.disposeBag)
-
 
         text.text = """
         NotificationCenter.default.rx
@@ -60,18 +57,14 @@ class NotiController: BaseViewController {
         // 第三方键盘回调三次问题，监听仅执行最后一次
         if(beginRect.size.height > 0 && (beginRect.origin.y - endRect.origin.y > 0)){
 
-        
+
         }
         })
         .disposed(by: disposeBag)
         """
-
-
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
         view.endEditing(true)
     }
-
-
 }

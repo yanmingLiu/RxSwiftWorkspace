@@ -74,8 +74,7 @@ extension UICollectionViewMove {
 // MARK: - UICollectionViewDelegate
 
 extension UICollectionViewMove: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    }
+    func collectionView(_: UICollectionView, didSelectItemAt _: IndexPath) {}
 }
 
 // MARK: - UICollectionViewDropDelegate
@@ -100,7 +99,6 @@ extension UICollectionViewMove: UICollectionViewDropDelegate {
                 // 将项目动画化到视图层次结构中的任意位置
                 coordinator.drop(item.dragItem, toItemAt: destinationIndexPath)
             }
-            break
         case .copy:
             // 执行批量更新
             collectionView.performBatchUpdates({
@@ -112,7 +110,6 @@ extension UICollectionViewMove: UICollectionViewDropDelegate {
                 }
                 collectionView.insertItems(at: indexPaths)
             })
-            break
         default:
             return
         }
@@ -139,7 +136,7 @@ extension UICollectionViewMove: UICollectionViewDropDelegate {
 
 extension UICollectionViewMove: UICollectionViewDragDelegate {
     /// 处理首次拖动时，是否响应
-    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+    func collectionView(_: UICollectionView, itemsForBeginning _: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
         let item = itemNames[indexPath.row]
         let itemProvider = NSItemProvider(object: item.name as NSString)
         let dragItem = UIDragItem(itemProvider: itemProvider)
@@ -152,7 +149,7 @@ extension UICollectionViewMove: UICollectionViewDragDelegate {
 // MARK: - UICollectionViewDataSource
 
 extension UICollectionViewMove: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         itemNames.count
     }
 

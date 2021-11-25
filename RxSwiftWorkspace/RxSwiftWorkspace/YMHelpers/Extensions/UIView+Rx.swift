@@ -7,24 +7,22 @@
 //
 
 import Foundation
-import RxSwift
 import RxCocoa
+import RxSwift
 
-extension Reactive where Base: UIView {
-    public var isHidden: Binder<Bool> {
-        return Binder(self.base) { view, hidden in
+public extension Reactive where Base: UIView {
+    var isHidden: Binder<Bool> {
+        return Binder(base) { view, hidden in
             view.isHidden = hidden
         }
     }
 }
 
-extension Reactive where Base: UIControl {
-    public var isEnabled: Binder<Bool> {
-        return Binder(self.base) { control, value in
+public extension Reactive where Base: UIControl {
+    var isEnabled: Binder<Bool> {
+        return Binder(base) { control, value in
             control.isEnabled = value
             control.backgroundColor = value ? UIColor.lightGray : UIColor.blue
         }
     }
 }
-
-

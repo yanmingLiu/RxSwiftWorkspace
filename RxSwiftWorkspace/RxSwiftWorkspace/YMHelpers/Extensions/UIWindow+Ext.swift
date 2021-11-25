@@ -43,9 +43,8 @@ extension UIScreen {
     }
 }
 
-
 extension UIDevice {
-    static var isIphoneX: Bool  {
+    static var isIphoneX: Bool {
         if UIDevice.current.userInterfaceIdiom != .phone {
             return true
         }

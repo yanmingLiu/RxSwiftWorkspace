@@ -9,12 +9,11 @@
 import UIKit
 
 class BlockController: BaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // 普通方式
-        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "www.baidu.com")!)) { (data, _, error) in
+        URLSession.shared.dataTask(with: URLRequest(url: URL(string: "www.baidu.com")!)) { data, _, error in
 
             guard error == nil else {
                 print("Data Task Error: \(error!)")
@@ -27,22 +26,17 @@ class BlockController: BaseViewController {
             }
 
             print("Data Task Success with count: \(data.count)")
-            }.resume()
+        }.resume()
 
         // rx
         URLSession.shared.rx
             .data(request: URLRequest(url: URL(string: "www.baidu.com")!))
-            .subscribe(onNext: { (data) in
+            .subscribe(onNext: { data in
                 print("Data Task Success with count: \(data.count)")
-            }, onError: { (error) in
+            }, onError: { error in
                 print("Data Task Error: \(error)")
-            }, onCompleted: {
-
-            }, onDisposed: {
-
-            })
+            }, onCompleted: {}, onDisposed: {})
             .disposed(by: rx.disposeBag)
-
 
         text.text = """
 
@@ -59,7 +53,5 @@ class BlockController: BaseViewController {
         })
         .disposed(by: disposeBag)
         """
-
     }
-
 }

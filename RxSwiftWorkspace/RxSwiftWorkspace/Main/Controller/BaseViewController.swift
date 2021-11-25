@@ -8,13 +8,12 @@
 
 import UIKit
 
-import RxSwift
-import RxCocoa
 import NSObject_Rx
+import RxCocoa
+import RxSwift
 import Then
 
 class BaseViewController: UIViewController {
-
     let text = UITextView()
 
     override func viewDidLoad() {
@@ -22,17 +21,14 @@ class BaseViewController: UIViewController {
 
         view.backgroundColor = UIColor.black
 
-
-        text.frame = CGRect(x: 20, y: 0, width: view.bounds.width-40, height: view.bounds.height)
+        text.frame = CGRect(x: 20, y: 0, width: view.bounds.width - 40, height: view.bounds.height)
         text.textColor = UIColor.white
         text.backgroundColor = UIColor.black
         text.font = UIFont.systemFont(ofSize: 18)
         view.addSubview(text)
-
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
         view.endEditing(true)
     }
 
@@ -47,6 +43,4 @@ class BaseViewController: UIViewController {
 
         navigationController?.navigationBar.prefersLargeTitles = true
     }
-
-    
 }

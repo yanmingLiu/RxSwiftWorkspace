@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-
-extension UIColor {
+public extension UIColor {
     /// 随机颜色
-    class var random: UIColor {
-        get {
-            return UIColor(red: CGFloat(arc4random()%256) / 255.0, green: CGFloat(arc4random()%256) / 255.0, blue: CGFloat(arc4random()%256) / 255.0, alpha: 0.5)
-        }
+    static var random: UIColor {
+        return UIColor(red: CGFloat(arc4random() % 256) / 255.0,
+                       green: CGFloat(arc4random() % 256) / 255.0,
+                       blue: CGFloat(arc4random() % 256) / 255.0,
+                       alpha: 0.5)
     }
 
     /// 根据16进制颜色值返回颜色
@@ -32,49 +32,67 @@ extension UIColor {
         } else {
             str = hexString
         }
-        
+
         let length = str.count
         // 如果不是 RGB RGBA RRGGBB RRGGBBAA 结构
         if length != 3 && length != 4 && length != 6 && length != 8 {
             return .clear
         }
-        
+
         // 将 RGB RGBA 转换为 RRGGBB RRGGBBAA 结构
         if length < 5 {
             var tStr = ""
             str.forEach { tStr.append(String(repeating: $0, count: 2)) }
             str = tStr
         }
-        
-        guard let hexValue = Int(str, radix: 16) else { return .clear }
-        
+
+        guard let hexValue = Int(str, radix: 16) else {
+            return .clear
+        }
+
         var red = 0
         var green = 0
         var blue = 0
-        
+
         if length == 3 || length == 6 {
-            red = (hexValue >> 16) & 0xff
-            green = (hexValue >> 8) & 0xff
-            blue = hexValue & 0xff
+            red = (hexValue >> 16) & 0xFF
+            green = (hexValue >> 8) & 0xFF
+            blue = hexValue & 0xFF
         } else {
-            red = (hexValue >> 20) & 0xff
-            green = (hexValue >> 16) & 0xff
-            blue = (hexValue >> 8) & 0xff
+            red = (hexValue >> 20) & 0xFF
+            green = (hexValue >> 16) & 0xFF
+            blue = (hexValue >> 8) & 0xFF
         }
-        return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
+        return UIColor(red: CGFloat(red) / 255.0,
+                       green: CGFloat(green) / 255.0,
+                       blue: CGFloat(blue) / 255.0,
+                       alpha: CGFloat(alpha))
     }
-    
+
     /// 根据16进制颜色值返回颜色
     /// - Parameters:
     ///   - hex: 16进制数值
     ///   - alpha: 透明度，默认为1
     /// - Returns: UIColor
-    static func hexInt32(hex:Int32, alpha:CGFloat = 1) -> UIColor {
-        let r = CGFloat((hex & 0xff0000) >> 16) / 255
-        let g = CGFloat((hex & 0xff00) >> 8) / 255
-        let b = CGFloat(hex & 0xff) / 255
+    static func hexInt32(_ hex: Int32, alpha: CGFloat = 1) -> UIColor {
+        let r = CGFloat((hex & 0xFF0000) >> 16) / 255
+        let g = CGFloat((hex & 0xFF00) >> 8) / 255
+        let b = CGFloat(hex & 0xFF) / 255
         return UIColor(red: r, green: g, blue: b, alpha: alpha)
     }
+
+    /// 颜色 --> 图片
+    /// - Returns: UIImage?
+    func toImage() -> UIImage? {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()!
+        context.setFillColor(cgColor)
+        context.fill(rect)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else {
+            return nil
+        }
+        UIGraphicsEndImageContext()
+        return image
+    }
 }
-
-

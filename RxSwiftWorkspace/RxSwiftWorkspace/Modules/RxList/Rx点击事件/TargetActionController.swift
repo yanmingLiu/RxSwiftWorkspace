@@ -8,8 +8,6 @@
 
 import UIKit
 class TargetActionController: BaseViewController {
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,7 +16,7 @@ class TargetActionController: BaseViewController {
         btn.backgroundColor = UIColor.random
         view.addSubview(btn)
 
-        btn.snp.makeConstraints { (make) in
+        btn.snp.makeConstraints { make in
             make.width.equalTo(100)
             make.height.equalTo(50)
             make.right.equalTo(-50)
@@ -26,11 +24,10 @@ class TargetActionController: BaseViewController {
         }
 
         btn.rx.tap
-            .subscribe({ (event) in
+            .subscribe { _ in
                 dlog(btn.currentTitle)
-            })
+            }
             .disposed(by: rx.disposeBag)
-
 
         text.text = """
 
@@ -54,9 +51,5 @@ class TargetActionController: BaseViewController {
             .disposed(by: rx.disposeBag)
 
         """
-
     }
-    
-
-
 }

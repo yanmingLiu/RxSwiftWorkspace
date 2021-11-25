@@ -9,27 +9,18 @@
 import UIKit
 
 class RxListController: BaseTableViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
 
         keys = ["Rx点击事件",
                 "KVO监听",
                 "闭包回调",
                 "通知",
-                "登录",
-
-        ]
+                "登录"]
         vaules = ["TargetActionController",
                   "KVOController",
                   "BlockController",
                   "NotiController",
-                  "LoginController"
-
-        ]
-
-
+                  "LoginController"]
     }
-
 }

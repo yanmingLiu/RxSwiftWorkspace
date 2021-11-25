@@ -18,7 +18,7 @@ class TitleTagViewController: UIViewController {
         view.backgroundColor = .white
 
         demo1()
-        
+
         demo2()
     }
 
@@ -38,18 +38,19 @@ class TitleTagViewController: UIViewController {
         imgv.translatesAutoresizingMaskIntoConstraints = false
         imgv.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
         imgv.topAnchor.constraint(equalTo: titleLabel.topAnchor).isActive = true
-        
+
         // tittle
         let font = UIFont.boldSystemFont(ofSize: 18)
         let paragraph = NSMutableParagraphStyle()
         paragraph.lineSpacing = 4
         paragraph.lineBreakMode = .byTruncatingTail
         paragraph.firstLineHeadIndent = font.lineHeight + 4
-        let attributes: [NSAttributedString.Key: Any] = [.font: font, .foregroundColor: UIColor.black, .paragraphStyle: paragraph]
+        let attributes: [NSAttributedString.Key: Any] = [.font: font,
+                                                         .foregroundColor: UIColor.black,
+                                                         .paragraphStyle: paragraph]
         let title = "132413412341234123412341234123412341233412341234123412341234123423412341234123412341234"
         let attrText = NSAttributedString(string: title, attributes: attributes)
         titleLabel.attributedText = attrText
-                
 
         let label1 = UILabel()
         label1.textColor = .gray
@@ -91,12 +92,12 @@ class TitleTagViewController: UIViewController {
         label1.numberOfLines = 0
         label1.text = "1. 标签在前，如果给富文本添加attachment，那如果后面的文字是连着的当字符（譬如98798798...）就会出现attachment和文字换行的问题，字符会另起一行。"
         view.addSubview(label1)
-        
+
         label1.translatesAutoresizingMaskIntoConstraints = false
         label1.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         label1.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         label1.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
-        
+
         self.label1 = label1
     }
 }

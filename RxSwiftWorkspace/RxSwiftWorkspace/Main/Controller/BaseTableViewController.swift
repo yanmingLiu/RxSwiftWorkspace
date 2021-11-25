@@ -9,8 +9,6 @@
 import UIKit
 
 class BaseTableViewController: UITableViewController {
-
-
     var keys = [String]()
     var vaules = [String]()
 
@@ -24,15 +22,14 @@ class BaseTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in _: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return keys.count
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
@@ -41,19 +38,15 @@ class BaseTableViewController: UITableViewController {
         return cell
     }
 
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+    override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = vaules[indexPath.row]
 
-        getvc(vc: vc) { (controller) in
+        getvc(vc: vc) { controller in
 
-            guard let vc = controller else {return}
+            guard let vc = controller else { return }
 
             vc.title = self.keys[indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
         }
-
     }
-
 }

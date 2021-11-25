@@ -196,6 +196,8 @@ var students = ["Kofi", "Abena", "Peter", "Kweku", "Akosua"]
 students.sort()
 print(students)
 
+students.reversed()
+
 // reversed
 print(arrR.reversed())
 

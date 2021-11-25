@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 public func adaptWidth(designWidth: CGFloat = 375.0, _ vaule: CGFloat) -> CGFloat {
     return UIScreen.main.bounds.size.width / designWidth * vaule
 }
@@ -65,7 +64,9 @@ extension UIView {
     ///   - direction: 圆角方向
     ///   - vaule: 圆角值
     func addRadius(direction: UIRectCorner = .allCorners, vaule: CGFloat) {
-        let masPath = UIBezierPath(roundedRect: bounds, byRoundingCorners: direction, cornerRadii: CGSize(width: vaule, height: vaule))
+        let masPath = UIBezierPath(roundedRect: bounds,
+                                   byRoundingCorners: direction,
+                                   cornerRadii: CGSize(width: vaule, height: vaule))
         let masLayer = CAShapeLayer()
         masLayer.path = masPath.cgPath
         masLayer.frame = bounds

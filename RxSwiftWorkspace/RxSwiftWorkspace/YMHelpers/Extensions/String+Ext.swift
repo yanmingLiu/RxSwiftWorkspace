@@ -1,27 +1,19 @@
 //
-//  String+Ext.swift
-//  RxExamples
+//  UIWindow+Ext.swift
+//  DouYinSwift5
 //
-//  Created by jin on 2019/5/29.
-//  Copyright © 2019 晋先森. All rights reserved.
+//  Created by lym on 2020/7/23.
+//  Copyright © 2020 lym. All rights reserved.
 //
 
 import Foundation
 import UIKit
- 
-extension String {
- 
-    func contains(regular:String) -> Bool {
-        return self.range(of: regular, options: .regularExpression, range: nil, locale: nil) != nil
-    }
-    func match(_ regular: String) -> Bool {
-        return self.contains(regular: regular)
-    }
-    
+
+public extension String {
     /// 字符串转换成UIViewController?
     /// - Returns: UIViewController?
-    public func toViewController() -> UIViewController? {
-        if self.isEmpty {
+    func toViewController() -> UIViewController? {
+        if isEmpty {
             return nil
         }
         // 1.获取命名空间
@@ -29,63 +21,58 @@ extension String {
             return nil
         }
         // 2.获取Class
-        let vcCls: AnyClass? = NSClassFromString(name + "." + self)
-        guard let tyleCls = vcCls as? UIViewController.Type else {
+        let vcClass: AnyClass? = NSClassFromString(name + "." + self)
+        guard let typeClass = vcClass as? UIViewController.Type else {
             return nil
         }
         // 3.创建vc
-        let vc = tyleCls.init()
+        let vc = typeClass.init()
         return vc
     }
 }
 
+public extension String {
+    func contains(regular: String) -> Bool {
+        return range(of: regular, options: .regularExpression, range: nil, locale: nil) != nil
+    }
+}
 
-extension String {
-    subscript (r: Range<Int>) -> String {
-        let start = self.index(self.startIndex, offsetBy: r.lowerBound, limitedBy: self.endIndex) ?? self.endIndex
-        let end = self.index(self.startIndex, offsetBy: r.upperBound, limitedBy: self.endIndex) ?? self.endIndex
-        return String(self[start..<end])
+public extension String {
+    subscript(r: Range<Int>) -> String {
+        let start = index(startIndex, offsetBy: r.lowerBound, limitedBy: endIndex) ?? endIndex
+        let end = index(startIndex, offsetBy: r.upperBound, limitedBy: endIndex) ?? endIndex
+        return String(self[start ..< end])
     }
-    
-    subscript (n:Int) -> String {
-        return self[n..<n+1]
+
+    subscript(n: Int) -> String {
+        return self[n ..< n + 1]
     }
-    
-    subscript (str:String) -> Range<Index>? {
-        return self.range(of: str)
+
+    subscript(str: String) -> Range<Index>? {
+        return range(of: str)
     }
-    
+
     subscript(value: PartialRangeUpTo<Int>) -> Substring {
-        get {
-            return self[..<index(startIndex, offsetBy: value.upperBound)]
-        }
+        return self[..<index(startIndex, offsetBy: value.upperBound)]
     }
-    
+
     subscript(value: PartialRangeThrough<Int>) -> Substring {
-        get {
-            return self[...index(startIndex, offsetBy: value.upperBound)]
-        }
+        return self[...index(startIndex, offsetBy: value.upperBound)]
     }
-    
+
     subscript(value: PartialRangeFrom<Int>) -> Substring {
-        get {
-            return self[index(startIndex, offsetBy: value.lowerBound)...]
-        }
+        return self[index(startIndex, offsetBy: value.lowerBound)...]
     }
-    
+
     subscript(value: CountableRange<Int>) -> Substring {
-        get {
-            let start = index(self.startIndex, offsetBy: value.lowerBound)
-            let end = index(self.startIndex, offsetBy: value.upperBound)
-            return self[start..<end]
-        }
+        let start = index(startIndex, offsetBy: value.lowerBound)
+        let end = index(startIndex, offsetBy: value.upperBound)
+        return self[start ..< end]
     }
-    
+
     subscript(value: ClosedRange<Int>) -> Substring {
-        get {
-            let start = index(self.startIndex, offsetBy: value.lowerBound)
-            let end = index(self.startIndex, offsetBy: value.upperBound)
-            return self[start...end]
-        }
+        let start = index(startIndex, offsetBy: value.lowerBound)
+        let end = index(startIndex, offsetBy: value.upperBound)
+        return self[start ... end]
     }
 }

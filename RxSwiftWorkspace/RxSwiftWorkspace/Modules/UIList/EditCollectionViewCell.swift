@@ -10,8 +10,8 @@ import UIKit
 
 class EditCollectionViewCell: UICollectionViewCell {
     static let forCellReuseIdentifier = "EditCollectionViewCell"
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-    }  
+    }
 }

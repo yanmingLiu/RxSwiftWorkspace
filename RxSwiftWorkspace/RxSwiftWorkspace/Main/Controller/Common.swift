@@ -9,11 +9,8 @@
 import Foundation
 import UIKit
 
-
-extension UIViewController {
-
-    public func getvc(vc: String?, block: @escaping (_ vc : UIViewController?) -> Void)  {
-
+public extension UIViewController {
+    func getvc(vc: String?, block: @escaping (_ vc: UIViewController?) -> Void) {
         guard let vcName = vc else {
             return
         }
@@ -33,5 +30,3 @@ extension UIViewController {
         block(childVC)
     }
 }
-
-

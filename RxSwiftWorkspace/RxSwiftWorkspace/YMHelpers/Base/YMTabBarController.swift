@@ -8,45 +8,38 @@
 
 import UIKit
 
-import SSCustomTabbar
 import ESTabBarController_swift
+import SSCustomTabbar
 
-class YMTabBarController: ESTabBarController {
-    
-}
+class YMTabBarController: ESTabBarController {}
 
 extension YMTabBarController {
-    
     public func setupChilds() {
-        
         guard let filePath = Bundle.main.path(forResource: "TabBar.json", ofType: nil) else {
             return
         }
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [[String: AnyObject]]
-            
+
             for dic in json {
                 addChild(vc: dic["vc"] as? String,
                          icon: dic["icon"] as? String,
                          title: dic["title"] as? String,
                          tag: dic["tag"] as? Int ?? 0)
-                
-                
             }
-        } catch  {
+        } catch {
             debugPrint("获取tabbar.json异常")
         }
     }
-    
+
     private func addChild(vc: String?, icon: String?, title: String?, tag: Int = 0) {
-        
         guard let vcName = vc else { return }
-        
+
         let viewController = vcName.toViewController()
-        
+
         guard let childVC = viewController else { return }
-        
+
         childVC.navigationItem.title = title
 
 //        // 1.获取命名空间
@@ -61,13 +54,13 @@ extension YMTabBarController {
 //        // 3.创建vc
 //        let childVC = tyleCls.init()
 //        childVC.navigationItem.title = title
-        
+
         if let image = icon {
             let nomalImage = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
             let selectedImage = UIImage(named: image + "Selected")?.withRenderingMode(.alwaysOriginal)
             let item = ESTabBarItem(title: title, image: nomalImage, selectedImage: selectedImage, tag: tag)
             childVC.tabBarItem = item
-            
+
             if let tabBarItem = childVC.tabBarItem as? ESTabBarItem {
                 switch item.tag {
                 case 0:
@@ -81,9 +74,8 @@ extension YMTabBarController {
                 }
             }
         }
-        
+
         let nav = YMNavigationController(rootViewController: childVC)
-        self.addChild(nav)
+        addChild(nav)
     }
-    
 }

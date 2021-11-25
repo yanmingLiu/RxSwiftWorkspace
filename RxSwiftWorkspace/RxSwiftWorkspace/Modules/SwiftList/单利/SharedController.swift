@@ -6,8 +6,8 @@
 //  Copyright © 2019 lym. All rights reserved.
 //
 
-import UIKit
 import SnapKit
+import UIKit
 
 class SharedDemo {
     static let shared = SharedDemo()
@@ -16,32 +16,25 @@ class SharedDemo {
 }
 
 class SharedController: BaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         SharedDemo.shared.id = "1"
 
-
         text.text = """
 
 
-                    class SharedDemo {
-                        static let shared = SharedDemo()
-                        var id = ""
-                        private init() {}
-                    }
-                    """
-
+        class SharedDemo {
+            static let shared = SharedDemo()
+            var id = ""
+            private init() {}
+        }
+        """
     }
-    
 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+    override func touchesBegan(_: Set<UITouch>, with _: UIEvent?) {
         SharedDemo.shared.id = (arc4random() % 5).description
 
         dlog(SharedDemo.shared.id)
     }
-
-
 }

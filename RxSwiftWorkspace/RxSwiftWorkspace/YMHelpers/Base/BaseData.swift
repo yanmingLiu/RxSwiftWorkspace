@@ -18,6 +18,6 @@ class BaseData<T>: HandyJSON {
 
     func mapping(mapper: HelpingMapper) {
         mapper <<<
-            self.data <-- "result"
+            data <-- "result"
     }
 }
