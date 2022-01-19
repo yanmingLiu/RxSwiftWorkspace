@@ -2,9 +2,14 @@
 
 import Foundation
 
-let s = 1611127451000
+let s = 946656000000
+
+let is10 = (String(s).count == 10)
+let is13 = (String(s).count == 13)
 
 
+print(is10)
+print(is13)
 
 func timeStampToCurrentTime(_ timeStamp: Int) -> String {
     

@@ -44,10 +44,6 @@ public extension String {
         return String(self[start ..< end])
     }
 
-    subscript(n: Int) -> String {
-        return self[n ..< n + 1]
-    }
-
     subscript(str: String) -> Range<Index>? {
         return range(of: str)
     }

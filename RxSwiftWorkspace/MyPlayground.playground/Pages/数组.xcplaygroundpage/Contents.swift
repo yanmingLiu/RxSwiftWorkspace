@@ -1,24 +1,7 @@
 //: [Previous](@previous)
 
 import Foundation
-
-var arr:[Any] = [1,2,"三"]
-arr = arr.filter({ x in
-    return x is String
-})
-print(arr)
-
-
-
 // MARK: - 创建
-
-let v = 136.0
-
-let s = v / 60.0
-let m = v.truncatingRemainder(dividingBy: 60.0)
-
-print(s)
-print(m)
 
 var arrR = ["I", "just", "do", "it"]
 
@@ -90,8 +73,11 @@ print(arrR)
 // MARK: - finding Elements
 
 // contains
-print(arrR.contains("Marlon"))
-print(arrR.contains(where: { $0 == "iOS" }))
+let contains1 = arrR.contains("Marlon")
+print("contains1 = \(contains1)")
+
+let contains2 = arrR.contains(where: { $0 == "iOS" })
+print("contains2 = \(contains2)")
 
 // allSatisfy 满足
 print(arrR.allSatisfy({ $0 == "iOS" }))
@@ -159,19 +145,25 @@ print(numbers.dropLast(2))
 print(arrR.map({ $0.uppercased() }))
 
 // flatMap: 返回一个数组，该数组包含调用给定变换的结果与该序列的每个元素的连接。
+// flatMap可以作为降维使用
 let mapped = numbers.map { Array(repeating: $0, count: $0) }
 let flatMapped = numbers.flatMap { Array(repeating: $0, count: $0) }
 print(mapped)
 print(flatMapped)
 
-// compactMap
+// compactMap D/ 可以把一个集合中的空值去除，并且返回一个去除nil值得数组
 let possibleNumbers = ["1", "2", "three", "///4///", "5"]
 let compactMapped: [Int] = possibleNumbers.compactMap { str in Int(str) }
 print(compactMapped)
 
 // reduce 合并
+//initialResult为初始化的值，也是闭包Result第一次运行的值，Element就是要做处理的元素，处理后返回Result作为下次闭包的参数。
+// reduce(<#T##initialResult: Result##Result#>, <#T##nextPartialResult: (Result, Int) throws -> Result##(Result, Int) throws -> Result##(_ partialResult: Result, Int) throws -> Result#>)
 let numberSum = numbers.reduce(0, { $0 + $1 })
+// 简写
+let numberSum1 = numbers.reduce(0, +)
 print(numberSum)
+print(numberSum1)
 
 let reduceArr = [1, 2, 3].reduce("") { $0 + "\($1)" }
 print(reduceArr)

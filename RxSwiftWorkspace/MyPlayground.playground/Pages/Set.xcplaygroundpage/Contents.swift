@@ -4,11 +4,8 @@ import Foundation
 
 // 创建
 let setA: Set<String> = ["a","b","c"]
-
 let setB: Set = ["a","b","c"]
-
 let setC = Set(["a","b","c"])
-
 var setD = Set(setC)
 
 // 访问集合中的元素
@@ -18,18 +15,14 @@ for value in setA {
 }
 
 // 属性 方法
-
 print("isEmpty = \(setA.isEmpty)")
-
 print("count = \(setA.count)")
-
 print("contains = \(setA.contains("a"))")
 
 setD.insert("c")
 setD.remove("a")
 
 print("== \(setA == setC)")
-
 
 // 检查一个集合是否是另一个集合的子集：
 let intSetA: Set = [1,2,3,4,5,6,7,8,9,0]
@@ -64,6 +57,15 @@ print("unionSetAB = \(unionSetAB)")
 // 交集就是仅包含两个集合中共同的元素：
 let intersectionAB = intSetA.intersection(intSetB)
 print("intersectionAB = \(intersectionAB)")
+
+// MARK: - IndexSet
+
+/*
+表示一个有正整数组成的集合，我们其实可有用Set 达到同等效果。 但IndexSet更加 高效 ，内部使用了 一组范围列表 进行实现。 eg.
+存储1到1000
+set可能是[1,2,3,4,......,1000]
+IndexSet的内部只是真正存储了1,1000  首位和末位两个数字。 它会存储```连续的范围```。So 会更加高效
+*/
 
 
 //: [Next](@next)

@@ -30,7 +30,7 @@ target 'RxSwiftWorkspace' do
   pod 'SSCustomTabbar'
   pod "ESTabBarController-swift"
   pod 'AttributedString'
-  
+
   pod 'SwiftLint'
   
   pod 'MJRefresh'

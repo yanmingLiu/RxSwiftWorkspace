@@ -15,14 +15,20 @@ class SubStringCnotroller: UIViewController {
         view.backgroundColor = UIColor.white
 
         let str = "这里演示😺通😊过'下标'截取字🇨🇺符串的☠️操作, this is good func ,please look look."
+        
+        let beginIndex = str.index(str.startIndex, offsetBy: 3)
+        let endIndex = str.index(str.startIndex, offsetBy: 6)
+        let subString = str[beginIndex...endIndex]
+        print(subString)
 
+        
         let label = UILabel(frame: CGRect(x: 20, y: 160, width: view.bounds.width - 40, height: 60))
         label.numberOfLines = 0
         label.text = str
         view.addSubview(label)
-
+        
         let label2 = UILabel(frame: CGRect(x: 20, y: label.frame.maxY + 20, width: view.bounds.width - 40, height: 60))
-        label2.text = "subscript (n:5) -> String : " + str[5]
+        label2.text = "subscript (n:5) -> String : " + str[0 ... 5]
         view.addSubview(label2)
 
         let label3 = UILabel(frame: CGRect(x: 20, y: label2.frame.maxY + 20, width: view.bounds.width - 40, height: 90))
