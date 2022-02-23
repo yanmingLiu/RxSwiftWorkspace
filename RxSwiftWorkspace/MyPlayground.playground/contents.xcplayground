@@ -27,5 +27,6 @@
         <page name='集合类型协议'/>
         <page name='面试题'/>
         <page name='泛型'/>
+        <page name='算法'/>
     </pages>
 </playground>
