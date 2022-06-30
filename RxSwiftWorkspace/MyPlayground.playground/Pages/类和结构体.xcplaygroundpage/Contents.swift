@@ -64,7 +64,7 @@ xPoint.x = 10 // 哇哦~我被调用了
 extension Point {
     mutating func translateY(by offset: Int) {
         /// 这里的y实质上等于是self.y
-        y = y + offset
+        y += offset
     }
 }
 
