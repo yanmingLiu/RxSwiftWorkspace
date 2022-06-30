@@ -58,6 +58,10 @@ print("unionSetAB = \(unionSetAB)")
 let intersectionAB = intSetA.intersection(intSetB)
 print("intersectionAB = \(intersectionAB)")
 
+// setA 去掉 SetB中的元素
+let subtracting = intSetA.subtracting(intSetB)
+print("subtracting = \(subtracting)")
+
 // MARK: - IndexSet
 
 /*

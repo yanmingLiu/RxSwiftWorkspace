@@ -1,6 +1,82 @@
 //: [Previous](@previous)
 
 import Foundation
+
+struct HomeADModel: Equatable {
+    var code: String?
+}
+
+extension HomeADModel {
+    static func == (lhs: HomeADModel, rhs: HomeADModel) -> Bool {
+        return lhs.code == rhs.code
+    }
+}
+
+class ProductDetail: Equatable {
+    static func == (lhs: ProductDetail, rhs: ProductDetail) -> Bool {
+        let res = lhs.id > 0 && rhs.id > 0 && lhs.id == rhs.id && lhs.json == rhs.json
+        print("Equatable: \(res)")
+        return res
+    }
+
+    var id: Int = 0
+    var json: HomeADModel?
+
+    init(id: Int, json: HomeADModel?) {
+        self.id = id
+        self.json = json
+    }
+}
+
+extension Array {
+    // 去重
+    func deduplication<E: Equatable>(_ filter: (Element) -> E) -> [Element] {
+        var result = [Element]()
+        print("result = \(result)")
+
+        for value in self {
+            let key = filter(value)
+            print("key = \(key), value = \(value)")
+            if !result.map({ filter($0) }).contains(key) {
+                result.append(value)
+            }
+        }
+        print("result = \(result)")
+
+        return result
+    }
+}
+
+
+var arr1 = [ProductDetail(id: 0, json: HomeADModel(code: "0")),
+            ProductDetail(id: 2, json: HomeADModel(code: "2")),
+            ProductDetail(id: 3, json: HomeADModel(code: "3")),
+            ProductDetail(id: 4, json: HomeADModel(code: "4"))]
+
+var arr2 = [ProductDetail(id: 0, json: HomeADModel(code: "00")),
+            ProductDetail(id: 2, json: HomeADModel(code: "22")),
+            ProductDetail(id: 3, json: HomeADModel(code: "3")),
+            ProductDetail(id: 4, json: HomeADModel(code: "4"))]
+arr1.forEach { d in
+    print("\(d.id)  \(d.json?.code ?? "nil")")
+}
+print("-----------")
+
+// 只能单id去重
+//arr1.append(contentsOf: arr2)
+//arr1 = arr1.deduplication { $0.id }
+
+// contains，会走 ==
+arr2.forEach { d in
+    if !arr1.contains(d) {
+        arr1.append(d)
+    }
+}
+
+arr1.forEach { d in
+    print("\(d.id)  \(d.json?.code ?? "nil")")
+}
+
 // MARK: - 创建
 
 var arrR = ["I", "just", "do", "it"]
@@ -80,7 +156,7 @@ let contains2 = arrR.contains(where: { $0 == "iOS" })
 print("contains2 = \(contains2)")
 
 // allSatisfy 满足
-print(arrR.allSatisfy({ $0 == "iOS" }))
+print(arrR.allSatisfy { $0 == "iOS" })
 
 // first(where:)
 print(arrR.first(where: { $0 == "ios" }) ?? "no find")
@@ -142,7 +218,7 @@ print(numbers.dropLast(2))
 // MARK: - transforming
 
 // map: 返回包含在序列元素上映射给定闭包的结果的数组。
-print(arrR.map({ $0.uppercased() }))
+print(arrR.map { $0.uppercased() })
 
 // flatMap: 返回一个数组，该数组包含调用给定变换的结果与该序列的每个元素的连接。
 // flatMap可以作为降维使用
@@ -157,9 +233,9 @@ let compactMapped: [Int] = possibleNumbers.compactMap { str in Int(str) }
 print(compactMapped)
 
 // reduce 合并
-//initialResult为初始化的值，也是闭包Result第一次运行的值，Element就是要做处理的元素，处理后返回Result作为下次闭包的参数。
+// initialResult为初始化的值，也是闭包Result第一次运行的值，Element就是要做处理的元素，处理后返回Result作为下次闭包的参数。
 // reduce(<#T##initialResult: Result##Result#>, <#T##nextPartialResult: (Result, Int) throws -> Result##(Result, Int) throws -> Result##(_ partialResult: Result, Int) throws -> Result#>)
-let numberSum = numbers.reduce(0, { $0 + $1 })
+let numberSum = numbers.reduce(0) { $0 + $1 }
 // 简写
 let numberSum1 = numbers.reduce(0, +)
 print(numberSum)

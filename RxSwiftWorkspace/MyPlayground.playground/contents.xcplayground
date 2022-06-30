@@ -21,6 +21,7 @@
         <page name='callAsFunction'/>
         <page name='MVC'/>
         <page name='Set'/>
+        <page name='OrderedSet'/>
         <page name='类和结构体'/>
         <page name='willSet'/>
         <page name='序列sequence'/>
@@ -28,5 +29,7 @@
         <page name='面试题'/>
         <page name='泛型'/>
         <page name='算法'/>
+        <page name='Hashable 和 Equatable'/>
+        <page name='Encodable'/>
     </pages>
 </playground>
