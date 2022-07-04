@@ -1,15 +1,12 @@
 PODS:
-  - Alamofire (5.2.1)
-  - AttributedString (1.6.8)
+  - Alamofire (5.6.1)
+  - AttributedString (3.3.0)
   - Differentiator (4.0.1)
   - ESTabBarController-swift (2.8.0)
   - HandyJSON (5.0.2)
-  - IQKeyboardManagerSwift (6.5.5)
-  - Kingfisher (5.14.0):
-    - Kingfisher/Core (= 5.14.0)
-  - Kingfisher/Core (5.14.0)
-  - LookinServer (1.0.0)
-  - MJRefresh (3.5.0)
+  - IQKeyboardManagerSwift (6.5.10)
+  - LookinServer (1.0.6)
+  - MJRefresh (3.7.5)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
@@ -31,7 +28,6 @@ PODS:
   - SSCustomTabbar (2.0.6)
   - SwiftLint (0.43.0)
   - SwiftyAttributes (5.1.1)
-  - TangramKit (1.4.2)
   - TextFieldEffects (1.6.0)
   - Then (2.7.0)
   - Toast-Swift (5.0.1)
@@ -41,7 +37,6 @@ DEPENDENCIES:
   - ESTabBarController-swift
   - HandyJSON
   - IQKeyboardManagerSwift
-  - Kingfisher
   - LookinServer
   - MJRefresh
   - Moya/RxSwift
@@ -53,7 +48,6 @@ DEPENDENCIES:
   - SSCustomTabbar
   - SwiftLint
   - SwiftyAttributes
-  - TangramKit
   - TextFieldEffects
   - Then
   - Toast-Swift
@@ -66,7 +60,6 @@ SPEC REPOS:
     - ESTabBarController-swift
     - HandyJSON
     - IQKeyboardManagerSwift
-    - Kingfisher
     - LookinServer
     - MJRefresh
     - Moya
@@ -79,21 +72,19 @@ SPEC REPOS:
     - SSCustomTabbar
     - SwiftLint
     - SwiftyAttributes
-    - TangramKit
     - TextFieldEffects
     - Then
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-  AttributedString: 20191014381c897ea03bd6733a21b8f6e98145d1
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  AttributedString: bbcef26fee7d25c3d315ff47cde4e5426f4348ae
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
-  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
-  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
-  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
-  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  LookinServer: 18155b1e4a08213c236a1dd6b7ca52328a70a1e3
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -104,11 +95,10 @@ SPEC CHECKSUMS:
   SSCustomTabbar: a52533e429bd40f52ce8d7ecb801f3521fbd56a0
   SwiftLint: 0c645fdc6feed3e390c1701ab3cc669f88b42752
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
-  TangramKit: aad3ab8f9617418c9da96d59cddd71134ae8af83
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: f501b50f3c7555d13a36b7a38cca2b39531682af
+PODFILE CHECKSUM: a0b333b106f7f654e27197eaec280900a5928ec4
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

@@ -17,24 +17,24 @@ target 'RxSwiftWorkspace' do
   
   pod 'Moya/RxSwift'
   pod 'HandyJSON'
-  
+
   pod 'Then'
   pod 'SnapKit'
-  pod 'Kingfisher'
+
   pod 'Toast-Swift'
   pod 'SwiftyAttributes'
   pod 'TextFieldEffects'
   pod 'IQKeyboardManagerSwift'
-  pod 'TangramKit'
-  
+
+
   pod 'SSCustomTabbar'
   pod "ESTabBarController-swift"
   pod 'AttributedString'
 
   pod 'SwiftLint'
-  
+
   pod 'MJRefresh'
-  
+
   pod 'LookinServer', :configurations => ['Debug']
 
 end

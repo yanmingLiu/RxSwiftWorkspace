@@ -1,0 +1,23 @@
+//
+//  Common.xcconfig
+//  RxSwiftWorkspace
+//
+//  Created by lym on 2022/7/4.
+//  Copyright © 2022 lym. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+CLANG_ENABLE_MODULES = YES
+SWIFT_VERSION = 5.0
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = arm64
+
+TARGETED_DEVICE_FAMILY = 1
+IPHONEOS_DEPLOYMENT_TARGET = 11.0
+
+PRODUCT_VERSION_SUFFIX = 1
+PRODUCT_VERSION_BASE = 1.0.0
+PRODUCT_VERSION = $(PRODUCT_VERSION_BASE).$(PRODUCT_VERSION_SUFFIX)
+
+PRODUCT_BUNDLE_NAME = Moments

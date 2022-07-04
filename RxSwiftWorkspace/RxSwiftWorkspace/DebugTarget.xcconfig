@@ -1,0 +1,13 @@
+//
+//  DebugTarget.xcconfig
+//  RxSwiftWorkspace
+//
+//  Created by lym on 2022/7/4.
+//  Copyright © 2022 lym. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_BUNDLE_NAME = $(inherited) α
+PRODUCT_BUNDLE_IDENTIFIER = com.ibanimatable.moments.development

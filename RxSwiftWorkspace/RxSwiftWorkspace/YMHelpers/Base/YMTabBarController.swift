@@ -20,7 +20,11 @@ extension YMTabBarController {
         }
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
-            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [[String: AnyObject]]
+            guard let json = try JSONSerialization
+                .jsonObject(with: data, options: .mutableContainers) as? [[String: AnyObject]]
+            else {
+                return
+            }
 
             for dic in json {
                 addChild(vc: dic["vc"] as? String,

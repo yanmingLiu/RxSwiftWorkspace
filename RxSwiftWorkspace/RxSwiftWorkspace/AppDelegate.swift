@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 import SSCustomTabbar
-import TangramKit
+import SwiftUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        TGDimeAdapter.template(CGSize(width: 360, height: 534))
 
         uuid()
 
@@ -35,5 +33,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func uuid() {
         let uuid1 = UIDevice.current.identifierForVendor?.uuidString ?? ""
         dlog("uuid1 = \(uuid1)")
+
+        #if DEBUG
+        dlog("DEBUG")
+        #endif
+
+        #if RELEASE
+        dlog("RELEASE")
+        #endif
+
+        #if APPSTORE
+        dlog("APPSTORE")
+        #endif
     }
 }

@@ -73,10 +73,18 @@
 		3888E5A02628410A00B17EA9 /* Bundle+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
 		3888E5A3262943C900B17EA9 /* CALayer+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Ext.swift"; sourceTree = "<group>"; };
 		38BC1B2F25C0323800D31E4C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		38C1C80B2872996C00B7AF60 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		38C1C80C287299AF00B7AF60 /* AppStoreProject.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppStoreProject.xcconfig; sourceTree = "<group>"; };
+		38C1C80D28729A8000B7AF60 /* ReleaseProject.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseProject.xcconfig; sourceTree = "<group>"; };
+		38C1C80E28729A8A00B7AF60 /* DebugProject.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugProject.xcconfig; sourceTree = "<group>"; };
+		38C1C80F28729A9700B7AF60 /* AppStoreTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppStoreTarget.xcconfig; sourceTree = "<group>"; };
+		38C1C81028729AA000B7AF60 /* DebugTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = DebugTarget.xcconfig; sourceTree = "<group>"; };
+		38C1C81128729AAB00B7AF60 /* ReleaseTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ReleaseTarget.xcconfig; sourceTree = "<group>"; };
 		38D5E7A425FF2D1B007C35DE /* TitleTagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTagViewController.swift; sourceTree = "<group>"; };
 		38DA15B125EE0B8600B89A43 /* UICollectionViewMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewMove.swift; sourceTree = "<group>"; };
 		38DA15B925EE0EF000B89A43 /* EditCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditCollectionViewCell.xib; sourceTree = "<group>"; };
 		38DA15BA25EE0EF000B89A43 /* EditCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditCollectionViewCell.swift; sourceTree = "<group>"; };
+		91C73C57FE26ED99AD06EA47 /* Pods-RxSwiftWorkspace.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftWorkspace.appstore.xcconfig"; path = "Target Support Files/Pods-RxSwiftWorkspace/Pods-RxSwiftWorkspace.appstore.xcconfig"; sourceTree = "<group>"; };
 		92E9E9FB450CD6B5DB49115B /* Pods_RxSwiftWorkspace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftWorkspace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A676FBFC02F753101685184E /* Pods-RxSwiftWorkspace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftWorkspace.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftWorkspace/Pods-RxSwiftWorkspace.debug.xcconfig"; sourceTree = "<group>"; };
 		C255A1ED24A5F0D400E3C0F1 /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +140,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38C1C8072872990400B7AF60 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				38C1C80A2872995300B7AF60 /* Target */,
+				38C1C8092872994900B7AF60 /* Project */,
+				38C1C8082872994300B7AF60 /* Shared */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		38C1C8082872994300B7AF60 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				38C1C80B2872996C00B7AF60 /* Common.xcconfig */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		38C1C8092872994900B7AF60 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				38C1C80C287299AF00B7AF60 /* AppStoreProject.xcconfig */,
+				38C1C80D28729A8000B7AF60 /* ReleaseProject.xcconfig */,
+				38C1C80E28729A8A00B7AF60 /* DebugProject.xcconfig */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		38C1C80A2872995300B7AF60 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				38C1C80F28729A9700B7AF60 /* AppStoreTarget.xcconfig */,
+				38C1C81128729AAB00B7AF60 /* ReleaseTarget.xcconfig */,
+				38C1C81028729AA000B7AF60 /* DebugTarget.xcconfig */,
+			);
+			name = Target;
+			sourceTree = "<group>";
+		};
 		929FC6006A72EAC85B8B15A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +235,7 @@
 		C2EEC04B22F5808900422421 /* RxSwiftWorkspace */ = {
 			isa = PBXGroup;
 			children = (
+				38C1C8072872990400B7AF60 /* Configuration */,
 				C2EEC06222F5811900422421 /* YMHelpers */,
 				C2EEC05F22F580B700422421 /* Modules */,
 				C2EEC05E22F580A800422421 /* Main */,
@@ -407,6 +454,7 @@
 			children = (
 				A676FBFC02F753101685184E /* Pods-RxSwiftWorkspace.debug.xcconfig */,
 				042020900BECC8A0C92E4B72 /* Pods-RxSwiftWorkspace.release.xcconfig */,
+				91C73C57FE26ED99AD06EA47 /* Pods-RxSwiftWorkspace.appstore.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -608,8 +656,83 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		38C1C8052872976D00B7AF60 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C1C80C287299AF00B7AF60 /* AppStoreProject.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		38C1C8062872976D00B7AF60 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C1C80F28729A9700B7AF60 /* AppStoreTarget.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DFT44L6T2M;
+				INFOPLIST_FILE = RxSwiftWorkspace/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = AppStore;
+		};
 		C2EEC05922F5808B00422421 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C1C80E28729A8A00B7AF60 /* DebugProject.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -671,6 +794,7 @@
 		};
 		C2EEC05A22F5808B00422421 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38C1C80D28729A8000B7AF60 /* ReleaseProject.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -726,18 +850,16 @@
 		};
 		C2EEC05C22F5808B00422421 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A676FBFC02F753101685184E /* Pods-RxSwiftWorkspace.debug.xcconfig */;
+			baseConfigurationReference = 38C1C81028729AA000B7AF60 /* DebugTarget.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFT44L6T2M;
 				INFOPLIST_FILE = RxSwiftWorkspace/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.RxSwiftWorkspace";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -746,18 +868,16 @@
 		};
 		C2EEC05D22F5808B00422421 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 042020900BECC8A0C92E4B72 /* Pods-RxSwiftWorkspace.release.xcconfig */;
+			baseConfigurationReference = 38C1C81128729AAB00B7AF60 /* ReleaseTarget.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFT44L6T2M;
 				INFOPLIST_FILE = RxSwiftWorkspace/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-23.RxSwiftWorkspace";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -772,6 +892,7 @@
 			buildConfigurations = (
 				C2EEC05922F5808B00422421 /* Debug */,
 				C2EEC05A22F5808B00422421 /* Release */,
+				38C1C8052872976D00B7AF60 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -781,6 +902,7 @@
 			buildConfigurations = (
 				C2EEC05C22F5808B00422421 /* Debug */,
 				C2EEC05D22F5808B00422421 /* Release */,
+				38C1C8062872976D00B7AF60 /* AppStore */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

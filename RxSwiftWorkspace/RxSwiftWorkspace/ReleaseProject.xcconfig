@@ -1,0 +1,16 @@
+//
+//  ReleaseProject.xcconfig
+//  RxSwiftWorkspace
+//
+//  Created by lym on 2022/7/4.
+//  Copyright © 2022 lym. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "../Pods/Target Support Files/Pods-RxSwiftWorkspace/Pods-RxSwiftWorkspace.release.xcconfig"
+
+#include "Common.xcconfig"
+
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = $(inherited) RELEASE
