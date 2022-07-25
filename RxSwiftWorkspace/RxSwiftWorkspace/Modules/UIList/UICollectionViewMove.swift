@@ -38,7 +38,7 @@ class UICollectionViewMove: UIViewController {
 extension UICollectionViewMove {
     func initUI() {
         // 计算单个Item的大小
-        let width: CGFloat = (view.frame.width - 5 * 10) / 4
+        let width: CGFloat = floor(Double((view.frame.width - 5 * 10) / 4))
         let height: CGFloat = 40
 
         let flowLayout = UICollectionViewFlowLayout()
