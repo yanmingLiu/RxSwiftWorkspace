@@ -16,7 +16,9 @@ class UIListController: UITableViewController {
                 "MassiveViewController",
                 "MVCController",
                 "TitleTagViewController",
-                "LocalizableController",]
+                "LocalizableController",
+                "IconFontController"
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()

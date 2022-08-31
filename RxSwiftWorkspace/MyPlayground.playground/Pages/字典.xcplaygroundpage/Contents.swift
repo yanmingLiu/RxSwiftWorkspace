@@ -3,6 +3,12 @@
 import Foundation
 import UIKit
 
+var registerMap = [String: Int]()
+registerMap.updateValue(2, forKey: "key")
+print(registerMap)
+
+
+
 // MARK: - 知识点1：书中提到了可以用updateValue(_:forKey:) 获取到更新新值之前如果有值的旧值。
 /// 得到更新键值对之前的值 updateValue
 var dict = ["name":"liaoWorking","age":"17"]

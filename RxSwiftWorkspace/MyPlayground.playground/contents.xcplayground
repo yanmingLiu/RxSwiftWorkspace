@@ -31,5 +31,6 @@
         <page name='算法'/>
         <page name='Hashable 和 Equatable'/>
         <page name='Encodable'/>
+        <page name='设计模式'/>
     </pages>
 </playground>

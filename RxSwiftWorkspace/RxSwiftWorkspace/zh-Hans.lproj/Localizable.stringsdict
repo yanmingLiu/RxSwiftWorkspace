@@ -13,11 +13,11 @@
             <key>NSStringFormatValueTypeKey</key>
             <string>d</string>
             <key>zero</key>
-            <string>No Gifts</string>
+            <string>没有礼物</string>
             <key>one</key>
-            <string>%d Gift</string>
+            <string>%d 个礼物</string>
             <key>other</key>
-            <string>%d Gifts</string>
+            <string>%d 个礼物</string>
         </dict>
     </dict>
 </dict>

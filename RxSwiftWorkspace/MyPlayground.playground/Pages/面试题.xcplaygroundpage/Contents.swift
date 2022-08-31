@@ -61,8 +61,8 @@ class X {
         return 5
     }
 }
-let x = X()
-x.b() ?? x.c()
+let x2 = X()
+x2.b() ?? x2.c()
 
 // BA
 
