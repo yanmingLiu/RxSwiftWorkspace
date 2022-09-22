@@ -17,7 +17,8 @@ class UIListController: UITableViewController {
                 "MVCController",
                 "TitleTagViewController",
                 "LocalizableController",
-                "IconFontController"
+                "IconFontController",
+                "PopTriangleController",
     ]
 
     override func viewDidLoad() {
