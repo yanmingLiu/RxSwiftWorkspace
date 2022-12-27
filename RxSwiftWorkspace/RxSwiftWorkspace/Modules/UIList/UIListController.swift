@@ -19,7 +19,7 @@ class UIListController: UITableViewController {
                 "LocalizableController",
                 "IconFontController",
                 "PopTriangleController",
-    ]
+                "CoverFlowLayoutController"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

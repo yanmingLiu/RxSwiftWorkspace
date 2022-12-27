@@ -50,17 +50,17 @@ private class PathView: UIView {
         context?.addLine(to: CGPoint(x: midX - triangleWH, y: bottom))
 
         context?.addArc(tangent1End: CGPoint(x: minX, y: bottom),
-                       tangent2End: CGPoint(x: minX, y: minY),
-                       radius: triangleWH)
+                        tangent2End: CGPoint(x: minX, y: minY),
+                        radius: triangleWH)
         context?.addArc(tangent1End: CGPoint(x: minX, y: minY),
-                       tangent2End: CGPoint(x: maxX, y: minY),
-                       radius: triangleWH)
+                        tangent2End: CGPoint(x: maxX, y: minY),
+                        radius: triangleWH)
         context?.addArc(tangent1End: CGPoint(x: maxX, y: minY),
-                       tangent2End: CGPoint(x: maxX, y: bottom),
-                       radius: triangleWH)
+                        tangent2End: CGPoint(x: maxX, y: bottom),
+                        radius: triangleWH)
         context?.addArc(tangent1End: CGPoint(x: maxX, y: bottom),
-                       tangent2End: CGPoint(x: midX, y: bottom),
-                       radius: triangleWH)
+                        tangent2End: CGPoint(x: midX, y: bottom),
+                        radius: triangleWH)
         context?.closePath()
 
         context?.setStrokeColor(strokeColor.cgColor)

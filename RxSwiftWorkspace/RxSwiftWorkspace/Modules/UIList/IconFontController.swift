@@ -34,7 +34,7 @@ class IconFontController: UITableViewController {
             makeImage(.guanbiIcon),
             makeImage(.xinxiIcon),
             makeImage(.zuojiantouIcon),
-            makeImage(.youjiantouIcon)
+            makeImage(.youjiantouIcon),
         ]
 
         datas2 = [
@@ -53,7 +53,7 @@ class IconFontController: UITableViewController {
             makeText(.guanbiIcon),
             makeText(.xinxiIcon),
             makeText(.zuojiantouIcon),
-            makeText(.youjiantouIcon)
+            makeText(.youjiantouIcon),
         ]
         tableView.rowHeight = 90
         tableView.reloadData()
@@ -76,7 +76,7 @@ class IconFontController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return datas.count
     }
 

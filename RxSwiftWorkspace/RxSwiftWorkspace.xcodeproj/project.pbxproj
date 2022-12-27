@@ -24,6 +24,8 @@
 		38961990288EB39D009C7DA9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38961992288EB39D009C7DA9 /* Localizable.strings */; };
 		38961995288EB3A6009C7DA9 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 38961997288EB3A6009C7DA9 /* Localizable.stringsdict */; };
 		3896199B288EB418009C7DA9 /* LocalizableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3896199A288EB418009C7DA9 /* LocalizableController.swift */; };
+		38B1D16B29599FC600B41573 /* CoverFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1D16A29599FC600B41573 /* CoverFlowLayout.swift */; };
+		38B1D16D2959A00300B41573 /* CoverFlowLayoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B1D16C2959A00300B41573 /* CoverFlowLayoutController.swift */; };
 		38D5E7A525FF2D1B007C35DE /* TitleTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5E7A425FF2D1B007C35DE /* TitleTagViewController.swift */; };
 		38DA15B225EE0B8600B89A43 /* UICollectionViewMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DA15B125EE0B8600B89A43 /* UICollectionViewMove.swift */; };
 		38DA15BB25EE0EF000B89A43 /* EditCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DA15B925EE0EF000B89A43 /* EditCollectionViewCell.xib */; };
@@ -94,6 +96,8 @@
 		38961998288EB3A8009C7DA9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.stringsdict"; sourceTree = "<group>"; };
 		38961999288EB3A9009C7DA9 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = th; path = th.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		3896199A288EB418009C7DA9 /* LocalizableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableController.swift; sourceTree = "<group>"; };
+		38B1D16A29599FC600B41573 /* CoverFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowLayout.swift; sourceTree = "<group>"; };
+		38B1D16C2959A00300B41573 /* CoverFlowLayoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverFlowLayoutController.swift; sourceTree = "<group>"; };
 		38BC1B2F25C0323800D31E4C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		38C1C80B2872996C00B7AF60 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		38C1C80C287299AF00B7AF60 /* AppStoreProject.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AppStoreProject.xcconfig; sourceTree = "<group>"; };
@@ -390,6 +394,8 @@
 				3896199A288EB418009C7DA9 /* LocalizableController.swift */,
 				3873E86128BF64370064CBAC /* IconFontController.swift */,
 				3818996A28DC8A84006541D9 /* PopTriangleController.swift */,
+				38B1D16A29599FC600B41573 /* CoverFlowLayout.swift */,
+				38B1D16C2959A00300B41573 /* CoverFlowLayoutController.swift */,
 			);
 			path = UIList;
 			sourceTree = "<group>";
@@ -654,6 +660,7 @@
 				3888E59B262840B200B17EA9 /* NSNumber+Ext.swift in Sources */,
 				C2EEC09922F6C1CD00422421 /* TargetActionController.swift in Sources */,
 				C2EEC08E22F6AD5C00422421 /* BaseViewController.swift in Sources */,
+				38B1D16D2959A00300B41573 /* CoverFlowLayoutController.swift in Sources */,
 				C2EEC09B22F6C3B400422421 /* BaseTableViewController.swift in Sources */,
 				C2EEC08C22F6A9CE00422421 /* Common.swift in Sources */,
 				C2EEC09E22F6C63200422421 /* KVOController.swift in Sources */,
@@ -675,6 +682,7 @@
 				C2EEC07E22F5A4B700422421 /* RxListController.swift in Sources */,
 				380170A226CE8E9E00672A16 /* SubStringCnotroller.swift in Sources */,
 				38DA15B225EE0B8600B89A43 /* UICollectionViewMove.swift in Sources */,
+				38B1D16B29599FC600B41573 /* CoverFlowLayout.swift in Sources */,
 				3896199B288EB418009C7DA9 /* LocalizableController.swift in Sources */,
 				3818996B28DC8A84006541D9 /* PopTriangleController.swift in Sources */,
 				38D5E7A525FF2D1B007C35DE /* TitleTagViewController.swift in Sources */,

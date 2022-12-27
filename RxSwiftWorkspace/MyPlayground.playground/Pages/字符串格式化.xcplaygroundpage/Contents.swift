@@ -47,11 +47,8 @@ extension NSNumber {
     }
 }
 
-var a:NSNumber = NSNumber(value: 999999)
-
-
-let str = a.displayCount()
-
+var a2:NSNumber = NSNumber(value: 999999)
+let str = a2.displayCount()
 print("\(str)")
 
 //: [Next](@next)
