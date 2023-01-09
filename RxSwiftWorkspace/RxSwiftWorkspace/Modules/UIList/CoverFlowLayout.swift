@@ -29,7 +29,7 @@ class CoverFlowLayout: UICollectionViewFlowLayout {
 
     open var spacingMode: CoverFlowLayoutSpacingMode = .fixed(visibleOffset: 40)
 
-    fileprivate var state = LayoutState(size: CGSize.zero, direction: .horizontal)
+    fileprivate var state = LayoutState(size: .zero, direction: .horizontal)
 
     override open func prepare() {
         super.prepare()
@@ -44,8 +44,8 @@ class CoverFlowLayout: UICollectionViewFlowLayout {
 
     fileprivate func setupCollectionView() {
         guard let collectionView = collectionView else { return }
-        if collectionView.decelerationRate != UIScrollView.DecelerationRate.fast {
-            collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
+        if collectionView.decelerationRate != .fast {
+            collectionView.decelerationRate = .fast
         }
     }
 
@@ -62,8 +62,8 @@ class CoverFlowLayout: UICollectionViewFlowLayout {
         let scaledItemOffset = (side - side * sideItemScale) / 2
 
         switch spacingMode {
-        case let .fixed(spacing):
-            minimumLineSpacing = spacing - scaledItemOffset
+        case let .fixed(visibleOffset):
+            minimumLineSpacing = visibleOffset - scaledItemOffset
 
         case let .overlap(visibleOffset):
             let fullSizeSideItemOverlap = visibleOffset + scaledItemOffset
@@ -120,7 +120,7 @@ class CoverFlowLayout: UICollectionViewFlowLayout {
         else { return super.targetContentOffset(forProposedContentOffset: proposedContentOffset) }
 
         let isHorizontal = (scrollDirection == .horizontal)
-        let midSide = (isHorizontal ? collectionView.bounds.size.width : collectionView.bounds.size.height) / 2
+        let midSide = (isHorizontal ? collectionView.bounds.width : collectionView.bounds.height) / 2
         let proposedOffset = (isHorizontal ? proposedContentOffset.x : proposedContentOffset.y) + midSide
 
         var targetContentOffset: CGPoint

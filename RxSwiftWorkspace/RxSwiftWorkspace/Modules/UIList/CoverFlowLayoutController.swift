@@ -40,8 +40,8 @@ class CoverFlowLayoutController: UIViewController {
         let layout = CoverFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: width, height: height)
-        layout.spacingMode = .overlap(visibleOffset: 12)
-//        layout.spacingMode = .fixed(visibleOffset: 12)
+//        layout.spacingMode = .overlap(visibleOffset: 12)
+        layout.spacingMode = .fixed(visibleOffset: 12)
         layout.sideItemScale = 0.8
         layout.sideItemAlpha = 0.5
 
@@ -57,7 +57,7 @@ class CoverFlowLayoutController: UIViewController {
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor),
             collectionView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: height),
+            collectionView.heightAnchor.constraint(equalToConstant: height)
         ])
     }
 }
