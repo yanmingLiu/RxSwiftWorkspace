@@ -31,8 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func uuid() {
-        let uuid1 = UIDevice.current.identifierForVendor?.uuidString ?? ""
-        dlog("uuid1 = \(uuid1)")
+        let bundleIdentifier = Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier") as? String ?? ""
+        dlog("BundleIdentifier = \(bundleIdentifier)")
 
         #if DEBUG
         dlog("DEBUG")
